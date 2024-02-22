@@ -1,0 +1,54 @@
+$font-family: 'Epilogue', sans-serif;
+@mixin font($weight, $size) {
+    font: {
+        family: $font-family;
+        weight: $weight;
+        size: $size;
+    }
+}
+
+@mixin h1 {
+    @include font(800, 4.5rem);
+    line-height: 111%;
+}
+
+@mixin h2 {
+    @include font(800, 3.5rem);
+    line-height: 114%;
+}
+
+@mixin h3 {
+    @include font(800, 2.5rem);
+    line-height: 120%;
+}
+
+@mixin h4 {
+    @include font(700, 1.5rem);
+    line-height: 133%;
+}
+
+@mixin h5 {
+    @include font(400, 1rem);
+    line-height: 200%;
+    text-transform: uppercase;
+}
+
+@mixin label {
+    @include font(700, 0.75rem);
+    text-transform: uppercase;
+}
+
+@mixin text_big {
+    @include font(400, 1.25rem);
+    line-height: 160%;
+}
+
+@mixin text {
+    @include font(400, 1rem);
+    line-height: 200%;
+}
+
+@mixin text_small {
+    @include font(400, 0.88rem);
+    line-height: 171%;
+}

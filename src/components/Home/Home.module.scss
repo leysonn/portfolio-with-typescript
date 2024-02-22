@@ -1,0 +1,6 @@
+@import "../../styles/fonts";
+
+.title {
+    @include h1;
+    @apply text-center;
+}
