@@ -1,30 +1,43 @@
 import { Link } from '@tanstack/react-router';
+import { useState } from 'react';
 import styles from './Navbar.module.scss';
 import logo from '../../assets/images/logo.svg';
 import Button from '../Button/Button';
+import NavLinks from './NavLinks';
+import mobile_menu_icon from '../../assets/icons/mobile_menu_icon.svg';
+import close_icon from '../../assets/icons/close_icon.svg';
 
 function Navbar() {
+    const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
+
+    function toggleMobileMenu() {
+        setMobileMenuVisible(!mobileMenuVisible);
+    }
+
     return (
         <header className={styles.header}>
             <section className={styles.content}>
-                {/* TODO Разнести надпись и логотип по разным файлам */}
                 <Link to="/" className={styles.logo}>
-                    <img className={styles.logo} src={logo} alt="Logo" />
+                    <img src={logo} alt="Логотип компании" />
+                    <h1>Agency</h1>
                 </Link>
 
-                {/* TODO Навбар для телефонов */}
+                <NavLinks />
 
-                <nav>
-                    <Link to="/about">About</Link>
-                    <Link to="/services">Services</Link>
-                    <Link to="/portfolio">Portfolio</Link>
-                    <Link to="/blog">Blog</Link>
-                </nav>
-
-                <Link to="/contact">
-                    <Button width={8.62} content="CONTACT" color="dark" />
-                </Link>
+                <Button className={styles.mobileMenuButton} width={3} color="dark" onClick={toggleMobileMenu}>
+                    {mobileMenuVisible ? (
+                        <img src={close_icon} alt="Закрыть мобильное меню" loading="lazy" />
+                    ) : (
+                        <img src={mobile_menu_icon} alt="Открыть мобильное меню" loading="lazy" />
+                    )}
+                </Button>
             </section>
+
+            <div className={styles.mobileMenuWrapper + (mobileMenuVisible ? ' ' + styles.mobileMenuWrapperActive : '')}>
+                <div className={styles.mobileMenuContent}>
+                    <NavLinks onClick={toggleMobileMenu}/>
+                </div>
+            </div>
         </header>
     );
 }

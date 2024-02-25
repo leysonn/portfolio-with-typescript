@@ -1,16 +1,17 @@
 import styles from './Button.module.scss';
 
-interface IButtonProps {
+type ButtonProps = {
+    children: string | JSX.Element | JSX.Element[];
+    className?: string;
     width: number;
-    content: string;
     color: 'light' | 'dark' | 'light_accent' | 'dark_accent';
-    onCLick?(): void;
+    onClick?(): void;
 }
 
-function Button({ width, content, color, onCLick }: IButtonProps) {
+function Button({ children, className, width, color, onClick }: ButtonProps) {
     return (
-        <button style={{ width: width + 'rem' }} className={styles[color]} onClick={onCLick}>
-            {content}
+        <button style={{ width: width + 'rem' }} className={`${styles[color]} ${className}`} onClick={onClick}>
+            {children}
         </button>
     );
 }

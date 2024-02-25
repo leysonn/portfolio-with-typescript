@@ -27,6 +27,10 @@
             background-color: darken($color: $bg-color, $amount: 10);
         }
     }
+
+    img {
+        @apply m-auto w-4;
+    }
 }
 
 .dark {

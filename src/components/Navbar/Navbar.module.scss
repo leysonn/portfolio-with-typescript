@@ -1,24 +1,67 @@
 @import '../../styles/fonts';
 
 .header {
-    @apply bg-primary;
+    @apply bg-primary overflow-y-scroll;
 
     .content {
-        @apply flex justify-between items-center py-4 h-20 xl:px-32 lg:px-10 md:px-4;
+        @apply flex justify-between items-center py-4 h-20 xl:px-32 lg:px-10 md:px-4 px-5;
 
         .logo {
-            @apply h-12 flex-shrink-0 relative -top-0.5;
+            @apply h-12 flex justify-between items-center flex-shrink-0;
             width: 9.5rem;
+
+            img {
+                @apply w-12 h-12;
+            }
+
+            h1 {
+                @apply text-light;
+                @include h4;
+            }
         }
 
         nav {
-            @apply h-8 flex justify-between left-44 mx-10;
+            @apply md:flex md:justify-between hidden h-8 mx-10;
             width: 33rem;
 
             a {
                 @apply text-light;
                 @include text;
             }
+        }
+
+        button {
+            @apply hidden md:block;
+        }
+
+        .mobile-menu-button {
+            @apply block md:hidden;
+        }
+    }
+
+    .mobile-menu-wrapper {
+        @apply fixed overflow-y-scroll bg-primary w-full transition-transform translate-x-full md:hidden;
+        height: calc(100vh - 5rem);
+
+        &-active {
+            @apply translate-x-0;
+        }
+    }
+
+    .mobile-menu-content {
+        @apply flex flex-col items-center w-full;
+
+        nav {
+            @apply flex flex-col gap-10 my-5;
+
+            a {
+                @apply text-light text-center uppercase;
+                @include h4;
+            }
+        }
+
+        button {
+            @apply my-5;
         }
     }
 }
