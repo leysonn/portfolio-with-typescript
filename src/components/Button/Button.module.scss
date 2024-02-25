@@ -1,0 +1,50 @@
+@import '../../styles/fonts';
+@import '../../styles/colors';
+
+@mixin button($bg-color, $border: false) {
+    @include buttonText;
+    @apply py-4 h-12 transition-colors;
+    border-radius: 0.38rem;
+
+    @if $border {
+        @apply border-border border border-solid;
+    }
+
+    @if $bg-color == $primary {
+        &:hover {
+            background-color: lighten($color: $bg-color, $amount: 5);
+        }
+
+        &:active {
+            background-color: lighten($color: $bg-color, $amount: 10);
+        }
+    } @else {
+        &:hover {
+            background-color: darken($color: $bg-color, $amount: 5);
+        }
+
+        &:active {
+            background-color: darken($color: $bg-color, $amount: 10);
+        }
+    }
+}
+
+.dark {
+    @apply text-light bg-primary;
+    @include button($primary, true);
+}
+
+.dark_accent {
+    @apply text-light bg-dark-accent;
+    @include button($dark-accent);
+}
+
+.light {
+    @apply text-dark bg-light;
+    @include button($light, true);
+}
+
+.light_accent {
+    @apply text-light bg-light-accent;
+    @include button($light-accent);
+}

@@ -7,6 +7,13 @@ $font-family: 'Epilogue', sans-serif;
     }
 }
 
+@mixin buttonText {
+    @include font(900, 0.88rem);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+}
+
 @mixin h1 {
     @include font(800, 4.5rem);
     line-height: 111%;

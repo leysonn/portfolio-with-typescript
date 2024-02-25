@@ -1,6 +1,24 @@
-.h1 {
-    color: blue;
-    .pe {
-        text-decoration: underline;
+@import '../../styles/fonts';
+
+.header {
+    @apply bg-primary;
+
+    .content {
+        @apply flex justify-between items-center py-4 h-20 xl:px-32 lg:px-10 md:px-4;
+
+        .logo {
+            @apply h-12 flex-shrink-0 relative -top-0.5;
+            width: 9.5rem;
+        }
+
+        nav {
+            @apply h-8 flex justify-between left-44 mx-10;
+            width: 33rem;
+
+            a {
+                @apply text-light;
+                @include text;
+            }
+        }
     }
 }

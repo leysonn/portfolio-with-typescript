@@ -13,9 +13,13 @@ export default {
       "light": "#fff",
       "light-accent": "#ef6d58",
       "light-gray": "rgba(255, 255, 255, 0.64)",
+      "border": "rgba(255, 255, 255, 0.3)",
     },
     extend: {},
   },
   plugins: [],
+  experimental: {
+    optimizeUniversalDefaults: true
+  }
 }
 
