@@ -1,4 +1,4 @@
-# Сайт-портфолио на React
+# Сайт-портфолио на React [WIP]
 
 **Проект сделан по [бесплатному макету](https://www.figma.com/community/file/1063415783897538948/portfolio-template) из Figma.**
 
@@ -13,7 +13,7 @@
 - [CSS Modules](https://github.com/css-modules/css-modules)
 
 # Запуск проекта:
-<!-- **Проект загружен на [Github Pages](), но вы так же можете запустить его самостоятельно.** -->
+**Проект загружен на [Github Pages](https://leysonn.github.io/portfolio-with-typescript), но вы так же можете запустить его самостоятельно.**
 
 Запустить проект:
 ```
