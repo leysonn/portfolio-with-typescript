@@ -2,10 +2,10 @@
 @import '../../styles/fonts';
 
 .intro-content {
-    @apply w-screen md:h-200 bg-primary flex justify-center items-end flex-row-reverse flex-wrap xl:gap-20 2xl:gap-40;
+    @apply w-screen md:h-200 bg-primary flex justify-center items-end flex-row-reverse flex-wrap sm:flex-nowrap lg:gap-20 2xl:gap-40;
 
     .title_container {
-        @apply w-130;
+        @apply w-mobile lg:w-130 relative;
 
         .subtitle {
             @apply text-light-accent;
@@ -13,47 +13,52 @@
         }
 
         .star {
-            @apply w-37 h-37 absolute;
-            top: 13.13rem;
-            left: 25.81rem;
+            @apply hidden xl:block w-37 h-37 absolute;
+            top: 1.38rem;
+            left: 17.38rem;
         }
 
         .title {
-            @apply text-light z-10 relative my-6;
-            @include h1;
+            @apply text-light z-10 relative md:my-6 mt-5 mb-3;
+            @media (min-width: 1024px) {
+                @include h1;
+            }
+            @media (max-width: 1023px) {
+                @include h2;
+            }
         }
 
         .description {
-            @apply text-light-gray w-120;
+            @apply text-light-gray max-w-120;
             @include text;
         }
 
         .button-container {
-            @apply flex justify-between items-center w-72 mt-8;
+            @apply flex justify-between items-center w-72 md:mt-8 mt-4;
 
             .button {
-                @apply text-light;
+                @apply text-light hover:text-light-gray active:text-border transition-colors;
                 @include text;
             }
         }
 
         .quote-container {
-            @apply flex justify-start items-center gap-4 h-12 mt-28 mb-16;
+            @apply flex justify-start md:items-center gap-4 md:h-12 h-24 md:mt-28 md:mb-16 mt-12 mb-8;
 
             img {
                 @apply h-12 w-12;
             }
 
             div {
-                @apply h-13;
+                @apply md:h-13 h-24;
 
                 p {
-                    @apply text-light-gray;
+                    @apply text-light-gray md:m-0 mb-1;
                     @include text;
                 }
 
                 span {
-                    @apply text-light relative -top-1 left-1.5;
+                    @apply text-light md:relative md:-top-1 md:left-1.5;
                     @include text;
                 }
             }
@@ -61,13 +66,14 @@
     }
 
     .title-image {
-        @apply lg:w-100 lg:h-100 lg:mb-25;
+        @apply lg:w-100 lg:h-100 lg:mb-48 md:mb-96 mb-7.5 sm:mb-56;
         @media (min-width: 1280px) {
+            @apply mb-25;
             width: 35.62rem;
             height: 37.62rem;
         }
         @media (max-width: 1023px) {
-            width: 20.56rem;
+            @apply w-mobile;
             height: 20.88rem;
         }
     }

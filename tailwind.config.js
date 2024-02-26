@@ -17,9 +17,11 @@ export default {
     },
     extend: {
       spacing: {
+        "7.5": "1.875rem",
         "13": "3.25rem",
         "25": "6.25rem",
         "37": "9.25rem",
+        "mobile": "20.56rem",
         "100": "25rem",
         "120": "30rem",
         "130": "32.5rem",

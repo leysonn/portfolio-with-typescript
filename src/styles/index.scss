@@ -12,6 +12,6 @@
     border: 0;
 }
 
-// html {
-//     font-size: calc(1vw/0.9);
-// }
+#root > :last-child {
+    @apply mt-20;
+}

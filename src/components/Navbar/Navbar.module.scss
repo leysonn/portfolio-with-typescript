@@ -1,10 +1,10 @@
 @import '../../styles/fonts';
 
 .header {
-    @apply bg-primary overflow-y-scroll;
+    @apply bg-primary z-50 fixed top-0;
 
     .content {
-        @apply flex justify-between items-center py-4 h-20 xl:px-32 lg:px-10 md:px-4 px-5 sticky;
+        @apply flex justify-between items-center py-4 h-20 xl:px-32 lg:px-10 md:px-4 px-5 w-screen;
 
         .logo {
             @apply h-12 flex justify-between items-center flex-shrink-0;
@@ -40,7 +40,7 @@
     }
 
     .mobile-menu-wrapper {
-        @apply fixed overflow-y-scroll bg-primary w-full transition-transform translate-x-full md:hidden z-50;
+        @apply fixed overflow-y-scroll bg-primary w-full transition-transform translate-x-full md:hidden z-50 top-20;
         height: calc(100vh - 5rem);
 
         &-active {
