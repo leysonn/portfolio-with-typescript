@@ -15,7 +15,17 @@ export default {
       "light-gray": "rgba(255, 255, 255, 0.64)",
       "border": "rgba(255, 255, 255, 0.3)",
     },
-    extend: {},
+    extend: {
+      spacing: {
+        "13": "3.25rem",
+        "25": "6.25rem",
+        "37": "9.25rem",
+        "100": "25rem",
+        "120": "30rem",
+        "130": "32.5rem",
+        "200": "50rem",
+      },
+    },
   },
   plugins: [],
 }
