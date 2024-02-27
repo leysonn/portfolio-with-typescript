@@ -7,7 +7,7 @@
     border-radius: 0.38rem;
 
     @if $border {
-        @apply border-border border border-solid;
+        @apply border-gray border border-solid;
     }
 
     @if $bg-color == $primary {

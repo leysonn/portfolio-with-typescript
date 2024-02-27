@@ -1,6 +1,5 @@
 @import '../../styles/fonts';
 
-.title {
-    @include h1;
-    @apply text-center mt-10;
+.container {
+    @apply bg-orange-light;
 }

@@ -17,7 +17,13 @@ function Navbar() {
     return (
         <header className={styles.header}>
             <section className={styles.content}>
-                <Link to="/" className={styles.logo}>
+                <Link
+                    to="/"
+                    className={styles.logo}
+                    onClick={() => {
+                        mobileMenuVisible ? toggleMobileMenu() : undefined;
+                    }}
+                >
                     <img src={logo} alt="Логотип компании" />
                     <h1>Agency</h1>
                 </Link>
@@ -35,7 +41,7 @@ function Navbar() {
 
             <div className={styles.mobileMenuWrapper + (mobileMenuVisible ? ' ' + styles.mobileMenuWrapperActive : '')}>
                 <div className={styles.mobileMenuContent}>
-                    <NavLinks onClick={toggleMobileMenu}/>
+                    <NavLinks onClick={toggleMobileMenu} />
                 </div>
             </div>
         </header>

@@ -1,7 +1,7 @@
 @import '../../styles/colors';
 @import '../../styles/fonts';
 
-.intro-content {
+.hero-content {
     @apply w-screen md:h-200 bg-primary flex justify-center items-end flex-row-reverse flex-wrap sm:flex-nowrap lg:gap-20 2xl:gap-40;
 
     .title_container {
@@ -37,7 +37,7 @@
             @apply flex justify-between items-center w-72 md:mt-8 mt-4;
 
             .button {
-                @apply text-light hover:text-light-gray active:text-border transition-colors;
+                @apply text-light hover:text-light-gray active:text-gray transition-colors;
                 @include text;
             }
         }

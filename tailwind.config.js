@@ -13,7 +13,9 @@ export default {
       "light": "#fff",
       "light-accent": "#ef6d58",
       "light-gray": "rgba(255, 255, 255, 0.64)",
-      "border": "rgba(255, 255, 255, 0.3)",
+      "gray": "rgba(255, 255, 255, 0.3)",
+      "orange-light": "#fdf0e9",
+      "orange-dark": "#f3d1bf",
     },
     extend: {
       spacing: {
