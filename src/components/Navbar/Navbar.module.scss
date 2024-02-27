@@ -1,10 +1,10 @@
 @import '../../styles/fonts';
 
 .header {
-    @apply bg-primary z-50 fixed top-0;
+    @apply bg-primary z-50 fixed top-0 w-screen;
 
     .content {
-        @apply flex justify-between items-center py-4 h-20 xl:px-32 lg:px-10 md:px-4 px-5 w-screen;
+        @apply flex justify-between items-center py-4 h-20 xl:px-32 lg:px-10 md:px-4 px-5 max-w-d-screen w-full mx-auto;
 
         .logo {
             @apply h-12 flex justify-between items-center flex-shrink-0;
