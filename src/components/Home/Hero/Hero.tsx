@@ -1,10 +1,10 @@
-import styles from './HomeHero.module.scss';
-import Button from '../Button/Button';
-import title_image from '../../assets/images/homePage/hero.png';
-import title_star from '../../assets/images/homePage/title_star.svg';
-import avatar from '../../assets/images/homePage/avatar.png';
+import styles from './Hero.module.scss';
+import Button from '../../Button/Button';
+import title_image from '../../../assets/images/homePage/hero.png';
+import title_star from '../../../assets/images/homePage/title_star.svg';
+import avatar from '../../../assets/images/homePage/avatar.png';
 
-function HomeHero() {
+function Hero() {
     return (
         <section id="hero">
             <div className={styles.container}>
@@ -41,4 +41,4 @@ function HomeHero() {
     );
 }
 
-export default HomeHero;
+export default Hero;

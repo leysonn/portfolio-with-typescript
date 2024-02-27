@@ -1,12 +1,14 @@
-import HomeHero from '../../components/HomeHero/HomeHero';
+import Hero from '../../components/Home/Hero/Hero';
+import About from '../../components/Home/About/About';
 import Partners from '../../components/Partners/Partners';
 import styles from './Home.module.scss';
 
 function Home() {
     return (
         <div className={styles.container}>
-            <HomeHero />
+            <Hero />
             <Partners />
+            <About />
         </div>
     );
 }

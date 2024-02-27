@@ -1,0 +1,51 @@
+@import '../../../styles/fonts';
+
+.hero-content {
+    @apply w-screen flex justify-center flex-wrap sm:flex-nowrap sm:gap-3 lg:gap-32.5 2xl:gap-40;
+
+    .title_container {
+        @apply w-mobile lg:w-130 relative lg:my-42.7 sm:my-20;
+
+        .name {
+            @apply text-light-accent;
+            @include h5;
+        }
+
+        .title {
+            @apply text-dark relative md:my-6 mt-4.5 mb-7.5;
+            @media (min-width: 1024px) {
+                @include h2;
+            }
+            @media (max-width: 1023px) {
+                @include h3;
+            }
+        }
+
+        .subtitle {
+            @apply text-dark;
+            @include text_big;
+        }
+
+        .description {
+            @apply text-dark-gray max-w-120 md:my-4 mt-4.5;
+            @include text;
+        }
+
+        .button {
+            @apply relative md:top-4 top-8;
+        }
+    }
+
+    .about-image {
+        @apply lg:w-120 lg:h-120 lg:mt-40 mt-18 mb-4;
+        @media (min-width: 1280px) {
+            @apply my-25;
+            width: 35.38rem;
+            height: 36.56rem;
+        }
+        @media (max-width: 1023px) {
+            @apply w-mobile;
+            height: 21.25rem;
+        }
+    }
+}

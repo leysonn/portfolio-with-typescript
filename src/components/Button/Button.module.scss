@@ -46,6 +46,7 @@
 .light {
     @apply text-dark bg-light;
     @include button($light, true);
+    box-shadow: 0 3px 9px 0 rgba(57, 20, 0, 0.08);
 }
 
 .light_accent {
