@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './src/pages/**/*.{html,ts,tsx,scss}',
+    './src/components/**/*.{html,ts,tsx,scss}',
+    './index.html',
   ],
   theme: {
     colors: {
@@ -22,6 +23,7 @@ export default {
         "4.5": "1.125rem",
         "7.5": "1.875rem",
         "13": "3.25rem",
+        "15": "3.75rem",
         "18": "4.5rem",
         "25": "6.25rem",
         "32.5": "8.125rem",
@@ -33,7 +35,10 @@ export default {
         "100": "25rem",
         "120": "30rem",
         "130": "32.5rem",
+        "180": "45rem",
         "200": "50rem",
+        "250": "62.5rem",
+        "288.5": "72.125rem",
         "292.5": "73.125rem",
         "d-screen": "1440px",
       },

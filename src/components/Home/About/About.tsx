@@ -1,7 +1,9 @@
+import { Link } from '@tanstack/react-router';
 import styles from './About.module.scss';
 import Button from '../../Button/Button';
+import StatItem from './StatItem/StatItem';
+import { statList } from '../../../constants/statList';
 import about_image from '../../../assets/images/homePage/about.png';
-import { Link } from '@tanstack/react-router';
 
 function About() {
     return (
@@ -17,12 +19,17 @@ function About() {
                             Ability to put themselves in the merchant's shoes. It is meant to partner on the long run, and work as an extension of the
                             merchant's team.
                         </p>
-                        <Link to='/about' className={styles.button}>
+                        <Link to="/about" className={styles.button}>
                             <Button width={8.62} color="light">
-                            About Us
+                                About Us
                             </Button>
                         </Link>
                     </div>
+                </div>
+                <div className={styles.statContainer}>
+                    {statList.map((item) => (
+                        <StatItem key={item.key} value={item.value} description={item.description} />
+                    ))}
                 </div>
             </div>
         </section>

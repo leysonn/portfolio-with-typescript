@@ -1,5 +1,6 @@
 import styles from './Partners.module.scss';
-import { partnersList } from '../../helpers/partnersList';
+import Hr from '../Hr/Hr';
+import { partnersList } from '../../constants/partnersList';
 
 function Partners() {
     return (
@@ -11,7 +12,7 @@ function Partners() {
                     </a>
                 ))}
             </div>
-            <hr className={styles.hr} />
+            <Hr />
         </section>
     );
 }
