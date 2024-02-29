@@ -3,6 +3,7 @@ import About from '../../components/Home/About/About';
 import Partners from '../../components/Home/Partners/Partners';
 import styles from './Home.module.scss';
 import HowWeWork from '../../components/Home/HowWeWork/HowWeWork';
+import VideoReel from '../../components/Home/VideoReel/VideoReel';
 
 function Home() {
     return (
@@ -11,6 +12,7 @@ function Home() {
             <Partners />
             <About />
             <HowWeWork />
+            <VideoReel />
         </div>
     );
 }

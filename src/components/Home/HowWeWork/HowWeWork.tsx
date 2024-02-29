@@ -28,7 +28,6 @@ function HowWeWork() {
                 </div>
             </div>
             <Hr />
-            <h1>We’re Help</h1>
         </section>
     );
 }
