@@ -15,3 +15,7 @@
 #root > :last-child {
     @apply mt-20;
 }
+
+html {
+    @apply scroll-smooth;
+}

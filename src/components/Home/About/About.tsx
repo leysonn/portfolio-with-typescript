@@ -7,9 +7,8 @@ import about_image from '../../../assets/images/homePage/about.png';
 
 function About() {
     return (
-        <section id="hero">
-            <div className={styles.container}>
-                <div className={styles.heroContent}>
+        <section id="about">
+                <div className={styles.aboutContent}>
                     <img className={styles.aboutImage} src={about_image} alt=" " draggable={false} />
                     <div className={styles.title_container}>
                         <span className={styles.name}>About</span>
@@ -19,19 +18,18 @@ function About() {
                             Ability to put themselves in the merchant's shoes. It is meant to partner on the long run, and work as an extension of the
                             merchant's team.
                         </p>
-                        <Link to="/about" className={styles.button}>
-                            <Button width={8.62} color="light">
+                        <Link to="/about">
+                            <Button width={8.62} color="light" className={styles.button}>
                                 About Us
                             </Button>
                         </Link>
                     </div>
                 </div>
                 <div className={styles.statContainer}>
-                    {statList.map((item) => (
-                        <StatItem key={item.key} value={item.value} description={item.description} />
+                    {statList.map((item, index) => (
+                        <StatItem key={index} value={item.value} description={item.description} />
                     ))}
                 </div>
-            </div>
         </section>
     );
 }

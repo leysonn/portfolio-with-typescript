@@ -1,11 +1,7 @@
 import styles from './StatItem.module.scss';
+import { StatListItem } from '../../../../constants/statList';
 
-type StatItemProps = {
-    value: string;
-    description: string;
-};
-
-function StatItem({ value, description }: StatItemProps) {
+function StatItem({ value, description }: StatListItem) {
     return (
         <div className={styles.stat}>
             <h3 className={styles.number}>{value}</h3>

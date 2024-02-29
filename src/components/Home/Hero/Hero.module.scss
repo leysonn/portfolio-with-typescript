@@ -35,11 +35,6 @@
 
         .button-container {
             @apply flex justify-between items-center w-72 md:mt-8 mt-4;
-
-            .button {
-                @apply text-light hover:text-light-gray active:text-gray transition-colors;
-                @include text;
-            }
         }
 
         .quote-container {

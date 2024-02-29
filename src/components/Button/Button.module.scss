@@ -33,6 +33,33 @@
     }
 }
 
+@mixin buttonTransparent($text-color) {
+    @apply transition-colors;
+    @include text;
+
+    @if $text-color == $light {
+        @apply text-light;
+
+        &:hover {
+            color: darken($color: $text-color, $amount: 10);
+        }
+
+        &:active {
+            color: darken($color: $text-color, $amount: 20);
+        }
+    } @else if $text-color == $dark {
+        @apply text-dark;
+
+        &:hover {
+            color: lighten($color: $text-color, $amount: 10);
+        }
+
+        &:active {
+            color: lighten($color: $text-color, $amount: 20);
+        }
+    }
+}
+
 .dark {
     @apply text-light bg-primary;
     @include button($primary, true);
@@ -41,6 +68,10 @@
 .dark_accent {
     @apply text-light bg-dark-accent;
     @include button($dark-accent);
+}
+
+.dark_transparent {
+    @include buttonTransparent($dark);
 }
 
 .light {
@@ -52,4 +83,8 @@
 .light_accent {
     @apply text-light bg-light-accent;
     @include button($light-accent);
+}
+
+.light_transparent {
+    @include buttonTransparent($light);
 }

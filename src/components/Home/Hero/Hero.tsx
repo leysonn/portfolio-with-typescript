@@ -1,3 +1,4 @@
+import { Link } from '@tanstack/react-router';
 import styles from './Hero.module.scss';
 import Button from '../../Button/Button';
 import title_image from '../../../assets/images/homePage/hero.png';
@@ -21,10 +22,16 @@ function Hero() {
                         Agency provides a full service range including technical skills, design, business understanding.
                     </p>
                     <div className={styles.buttonContainer}>
-                        <Button width={9.62} color="light_accent">
-                            How We Work
-                        </Button>
-                        <button className={styles.button}>Contact Us</button>
+                        <Link to="#about">
+                            <Button width={9.62} color="light_accent">
+                                How We Work
+                            </Button>
+                        </Link>
+                        <Link to="/contact">
+                            <Button width={5.5} color="light_transparent">
+                                Contact Us
+                            </Button>
+                        </Link>
                     </div>
                     <div className={styles.quoteContainer}>
                         <img src={avatar} alt="Аватар" />

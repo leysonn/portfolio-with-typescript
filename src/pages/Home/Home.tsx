@@ -1,6 +1,6 @@
 import Hero from '../../components/Home/Hero/Hero';
 import About from '../../components/Home/About/About';
-import Partners from '../../components/Partners/Partners';
+import Partners from '../../components/Home/Partners/Partners';
 import styles from './Home.module.scss';
 
 function Home() {
