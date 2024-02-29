@@ -1,0 +1,32 @@
+@import '../../../styles/fonts';
+
+.how-we-work-content {
+    @apply xl:w-292.5 lg:w-250 md:w-180 sm:w-100 w-mobile flex md:justify-start justify-center flex-wrap md:flex-nowrap sm:gap-3 lg:gap-32.5 md:gap-11 2xl:gap-40 mx-auto;
+
+    .title_container {
+        @apply lg:w-117.5 md:w-100 w-mobile lg:mt-35 mt-8.5;
+
+        .name {
+            @apply text-light-accent;
+            @include h5;
+        }
+
+        .title {
+            @apply text-dark mt-4 md:mb-8 mb-3.5;
+            @include h3;
+        }
+
+        .description {
+            @apply text-dark-gray max-w-120 md:my-4;
+            @include text;
+        }
+
+        .button {
+            @apply md:mt-3 mt-8;
+        }
+    }
+}
+
+.reasons-container {
+    @apply flex flex-col justify-between h-76 md:mt-52 mt-18 md:mb-28 mb-15 w-mobile;
+}
