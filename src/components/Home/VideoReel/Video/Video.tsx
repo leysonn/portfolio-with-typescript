@@ -4,7 +4,7 @@ import styles from './Video.module.scss';
 import video_mp4 from '../../../../assets/videos/test-video.mp4';
 import video_webm from '../../../../assets/videos/test-video.webm';
 import preview from '../../../../assets/images/homePage/preview.png';
-import play_icon from '../../../../assets/icons/play.svg';
+import play_icon from '../../../../assets/icons/play_icon.svg';
 
 function Video() {
     const [isPlaying, setIsPlaying] = useState(false);
