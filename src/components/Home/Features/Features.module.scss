@@ -1,0 +1,64 @@
+@import '../../../styles/fonts';
+
+.features-content {
+    @apply xl:w-292.5 flex flex-row-reverse xl:justify-end justify-center flex-wrap sm:flex-nowrap sm:gap-3 xl:gap-32.5 2xl:gap-40 mx-auto;
+
+    .title_container {
+        @apply w-mobile lg:w-117.5 lg:mt-67 sm:my-20;
+
+        .name {
+            @apply text-light-accent;
+            @include h5;
+        }
+
+        .title {
+            @apply max-w-100 text-dark md:my-6 mt-4 mb-3;
+            @media (min-width: 1024px) {
+                @include h2;
+            }
+            @media (max-width: 1023px) {
+                @include h3;
+            }
+        }
+
+        .description {
+            @apply text-dark max-w-117.5 md:my-4 sm:mt-0.5;
+            @include text;
+        }
+
+        .button {
+            @apply md:mt-4.5 mt-8;
+        }
+
+        .features {
+            @apply flex flex-col gap-4 sm:mt-6 mt-7.5;
+        
+            .feature {
+                @apply flex items-center gap-4;
+                
+                img {
+                    @apply w-8 h-8;
+                }
+        
+                h3 {
+                    @apply text-dark-gray;
+                    @include text;
+                }
+            }
+        }
+    }
+
+    .features-image {
+        @apply lg:w-120 lg:h-125.5 lg:mt-40 mt-20 mb-1;
+        @media (min-width: 1280px) {
+            @apply mt-48;
+            width: 33.06rem;
+            height: 34.44rem;
+        }
+        @media (max-width: 1023px) {
+            @apply w-mobile;
+            height: 20.5rem;
+        }
+    }
+}
+

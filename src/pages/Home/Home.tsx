@@ -4,6 +4,7 @@ import Partners from '../../components/Home/Partners/Partners';
 import styles from './Home.module.scss';
 import HowWeWork from '../../components/Home/HowWeWork/HowWeWork';
 import VideoReel from '../../components/Home/VideoReel/VideoReel';
+import Features from '../../components/Home/Features/Features';
 
 function Home() {
     return (
@@ -13,6 +14,7 @@ function Home() {
             <About />
             <HowWeWork />
             <VideoReel />
+            <Features />
         </div>
     );
 }

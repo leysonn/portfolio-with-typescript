@@ -1,10 +1,10 @@
 @import '../../../styles/fonts';
 
 .video-reel-content {
-    @apply xl:w-292.5 lg:w-250 flex xl:justify-start justify-center flex-wrap md:flex-nowrap sm:gap-3 md:gap-15 lg:gap-32.5 mx-auto;
+    @apply xl:w-292.5 lg:w-250 flex xl:justify-start justify-center flex-wrap md:flex-nowrap sm:gap-3 md:gap-15 lg:gap-8 xl:gap-32.5 mx-auto;
 
     .title_container {
-        @apply w-mobile lg:w-117.5 lg:my-46.7 sm:my-20 mt-6;
+        @apply w-mobile xl:w-117.5 lg:mt-46.7 sm:mt-20 mt-6;
 
         .name {
             @apply text-light-accent;
