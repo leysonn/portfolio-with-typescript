@@ -10,7 +10,7 @@ function About() {
         <section id="about">
                 <div className={styles.aboutContent}>
                     <img className={styles.aboutImage} src={about_image} alt=" " draggable={false} />
-                    <div className={styles.title_container}>
+                    <div className={styles.titleContainer}>
                         <span className={styles.name}>About</span>
                         <h2 className={styles.title}>An Experience Design Agency</h2>
                         <span className={styles.subtitle}>Provides a full service range</span>

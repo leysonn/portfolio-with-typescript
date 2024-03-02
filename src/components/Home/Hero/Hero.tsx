@@ -10,7 +10,7 @@ function Hero() {
         <section id="hero">
             <div className={styles.heroContent}>
                 <img className={styles.titleImage} src={title_image} alt=" " draggable={false} />
-                <div className={styles.title_container}>
+                <div className={styles.titleContainer}>
                     <span className={styles.subtitle}>Modern Studio</span>
                     <img className={styles.star} src={title_star} alt=" " draggable={false} />
                     <h1 className={styles.title}>

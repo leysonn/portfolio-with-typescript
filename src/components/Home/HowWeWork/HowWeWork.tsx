@@ -9,7 +9,7 @@ function HowWeWork() {
     return (
         <section id="how-we-work">
             <div className={styles.howWeWorkContent}>
-                <div className={styles.title_container}>
+                <div className={styles.titleContainer}>
                     <span className={styles.name}>How we work</span>
                     <h2 className={styles.title}>Making Your Projects Look Awesome</h2>
                     <p className={styles.description}>

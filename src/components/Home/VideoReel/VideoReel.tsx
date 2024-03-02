@@ -6,7 +6,7 @@ function VideoReel() {
         <section id="video-reel">
             <div className={styles.videoReelContent}>
                 <Video />
-                <div className={styles.title_container}>
+                <div className={styles.titleContainer}>
                     <span className={styles.name}>Video Reel</span>
                     <h2 className={styles.title}>Unlock The Greatest Value Possible</h2>
                     <p className={styles.description}>
