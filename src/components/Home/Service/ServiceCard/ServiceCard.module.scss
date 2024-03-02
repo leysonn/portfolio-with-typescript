@@ -1,0 +1,23 @@
+@import '../../../../styles/fonts';
+
+.service-card {
+    @apply lg:border-r lg:border-b-0 border-b border-orange-dark border-solid lg:w-97.7 md:w-120 w-mobile h-100 lg:px-12 md:px-18 px-7 py-12 flex flex-col justify-start;
+
+    .icon {
+        @apply w-20 h-20;
+    }
+
+    .title {
+        @apply text-dark mt-10 mb-5;
+        @include h4;
+    }
+
+    .description {
+        @apply text-dark-gray;
+        @include text;
+    }
+
+    .button {
+        @apply mt-6.5;
+    }
+}

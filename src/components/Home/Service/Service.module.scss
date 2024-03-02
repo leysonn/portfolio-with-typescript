@@ -1,0 +1,94 @@
+@import '../../../styles/fonts';
+
+.service-content {
+    @apply xl:w-292.5 flex xl:justify-end justify-center flex-wrap sm:flex-nowrap sm:gap-3 lg:gap-30 mx-auto;
+
+    .title-container {
+        @apply w-mobile lg:w-130 lg:mt-63 sm:mt-20;
+
+        .name {
+            @apply text-light-accent;
+            @include h5;
+        }
+
+        .title {
+            @apply text-dark md:mt-5 md:mb-6.5 mt-3 mb-4;
+            @media (min-width: 1024px) {
+                @include h2;
+            }
+            @media (max-width: 1023px) {
+                @include h3;
+            }
+        }
+
+        .description {
+            @apply text-dark max-w-120;
+            @include text;
+        }
+
+        .button {
+            @apply mt-18;
+        }
+
+        .quote-container {
+            @apply flex md:items-center gap-4 md:h-12 md:mt-7.5 mt-6 h-16;
+
+            img {
+                @apply h-12 w-12;
+            }
+
+            div {
+                @apply h-12 mt-2;
+
+                p {
+                    @apply text-dark-gray md:m-0 mb-1;
+                    @include text_small;
+                }
+
+                span {
+                    @apply text-dark md:-top-1 md:left-1.5;
+                    @include text;
+                }
+            }
+        }
+    }
+
+    .title-image {
+        @apply lg:w-120 lg:h-120 lg:mt-53 sm:mt-35 mt-28 mb-1.5;
+        @media (min-width: 1280px) {
+            width: 36.25rem;
+            height: 35.62rem;
+        }
+        @media (max-width: 1023px) {
+            @apply w-mobile;
+            height: 20.44rem;
+        }
+    }
+}
+
+.service-cards {
+    @apply xl:w-292.5 mx-auto md:mt-35 mt-30;
+
+    .title-container {
+        @apply w-84 xl:mx-0 mx-auto;
+
+        .name {
+            @apply text-light-accent;
+            @include h5;
+        }
+
+        .title {
+            @apply text-dark mt-4;
+            @include h3;
+        }
+    }
+
+    .container {
+        @apply flex md:flex-row justify-center border border-solid border-orange-dark rounded-md mx-auto mt-8.5 mb-32
+            xl:w-292.5 lg:w-250 md:w-120 lg:flex-nowrap flex-wrap flex-col w-mobile;
+
+        & > :last-child {
+            @apply border-none;
+        }
+    }
+}
