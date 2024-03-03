@@ -1,10 +1,11 @@
-// import styles from './Portfolio.module.scss';
+import Title from '../../components/Title/Title';
+import styles from './Portfolio.module.scss';
 
 function Portfolio() {
     return (
-        <h1>
-            Portfolio
-        </h1>
+        <main className={styles.container}>
+            <Title title="Portfolio" description="Agency provides a full service range including technical skills, design, business understanding." />
+        </main>
     );
 }
 

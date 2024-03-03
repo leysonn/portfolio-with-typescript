@@ -1,10 +1,11 @@
-// import styles from './Services.module.scss';
+import Title from '../../components/Title/Title';
+import styles from './Services.module.scss';
 
 function Services() {
     return (
-        <h1>
-            Services
-        </h1>
+        <main className={styles.container}>
+            <Title title="Services" description="Agency provides a full service range including technical skills, design, business understanding." />
+        </main>
     );
 }
 
