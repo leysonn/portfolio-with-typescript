@@ -1,11 +1,11 @@
-import Hero from '../../components/Home/Hero/Hero';
-import About from '../../components/Home/About/About';
-import Partners from '../../components/Home/Partners/Partners';
+import Hero from '../../components/HomeSections/Hero/Hero';
+import About from '../../components/HomeSections/About/About';
+import Partners from '../../components/HomeSections/Partners/Partners';
 import styles from './Home.module.scss';
-import HowWeWork from '../../components/Home/HowWeWork/HowWeWork';
-import VideoReel from '../../components/Home/VideoReel/VideoReel';
-import Features from '../../components/Home/Features/Features';
-import Service from '../../components/Home/Service/Service';
+import HowWeWork from '../../components/HomeSections/HowWeWork/HowWeWork';
+import VideoReel from '../../components/HomeSections/VideoReel/VideoReel';
+import Features from '../../components/HomeSections/Features/Features';
+import Service from '../../components/HomeSections/Service/Service';
 
 function Home() {
     return (

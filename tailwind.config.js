@@ -18,6 +18,7 @@ export default {
       "orange-light": "#fdf0e9",
       "orange-dark": "#f3d1bf",
       "brown": "#5C2000",
+      "vinous": "#570B00",
     },
     extend: {
       spacing: {

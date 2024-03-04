@@ -1,12 +1,20 @@
 import { useState } from 'react';
-import { useVideoDuration } from '../../../../hooks/useVideoDuration';
+import { useVideoDuration } from '../../hooks/useVideoDuration';
 import styles from './Video.module.scss';
-import video_mp4 from '../../../../assets/videos/test-video.mp4';
-import video_webm from '../../../../assets/videos/test-video.webm';
-import preview from '../../../../assets/images/homePage/preview.png';
-import play_icon from '../../../../assets/icons/play_icon.svg';
+import play_icon from '../../assets/icons/play_icon.svg';
 
-function Video() {
+type VideoProps = {
+    preview: string;
+    video_mp4: string;
+    webm?: boolean;
+    video_webm: string;
+    height: {
+        default: number;
+        mobile: number;
+    };
+};
+
+function Video({ preview, video_mp4, webm = false, video_webm, height }: VideoProps) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [duration, setMetadata] = useVideoDuration();
 
@@ -15,18 +23,18 @@ function Video() {
     }
 
     return (
-        <div className={styles.videoWrapper}>
+        <div className={`${styles.videoWrapper} lg:h-${height.default} h-${height.mobile}`}>
             <video className={styles.video} onLoadedMetadata={setMetadata} hidden={!isPlaying} controls muted autoPlay>
                 <source src={video_mp4} type="video/mp4" />
-                <source src={video_webm} type="video/webm" />
+                {webm ? <source src={video_webm} type="video/webm" /> : null}
                 Your browser does not support the video tag.
             </video>
 
             <div className={styles.preview} hidden={isPlaying}>
                 <div className={styles.imageContainer}>
-                    <img src={preview} alt="Видео превью" draggable={false} />
+                    <img className={styles.image} src={preview} alt="Видео превью" draggable={false} />
                     <div className={styles.mask} />
-                    <button className={styles.playButton} onClick={handlePlayPause} >
+                    <button className={styles.playButton} onClick={handlePlayPause}>
                         <img src={play_icon} alt="Иконка воспроизведения" draggable={false} />
                     </button>
                 </div>

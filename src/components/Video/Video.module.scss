@@ -1,7 +1,7 @@
-@import '../../../../styles/fonts';
+@import '../../styles/fonts';
 
 .video-wrapper {
-    @apply relative lg:w-142.5 w-mobile lg:h-92 h-52 sm:mt-32 mt-16;
+    @apply relative lg:w-142.5 w-mobile sm:mt-32 mt-16;
 
     .video {
         @apply absolute top-0 left-0 w-full h-full;
@@ -12,6 +12,10 @@
 
         .image-container {
             @apply relative w-full h-full rounded-md overflow-hidden;
+
+            .image {
+                @apply w-full h-full;
+            }
 
             .mask {
                 @apply absolute top-0 left-0 w-full h-full bg-brown opacity-30;
@@ -27,7 +31,7 @@
         }
 
         .duration {
-            @apply absolute bottom-5 left-6 w-12 text-light text-center bg-brown bg-opacity-20 rounded-md;
+            @apply absolute bottom-5 left-6 w-12 text-light text-center bg-vinous bg-opacity-25 rounded-md;
             @include text;
         }
     }
