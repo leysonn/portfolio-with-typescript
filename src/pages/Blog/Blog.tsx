@@ -4,11 +4,7 @@ import styles from './Blog.module.scss';
 function Blog() {
     return (
         <main className={styles.container}>
-            <Title
-                title="Blog Articles"
-                description="Agency provides a full service range including technical skills, design, business understanding."
-                higher
-            />
+            <Title higher>Blog Articles</Title>
         </main>
     );
 }
