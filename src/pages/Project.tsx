@@ -1,5 +1,5 @@
 // import styles from './Project.module.scss';
-import { Route } from '../../routes/portfolio/$projectId';
+import { Route } from '../routes/portfolio/$projectId';
 
 function Project() {
     const { projectId } = Route.useParams();

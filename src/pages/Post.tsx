@@ -1,5 +1,5 @@
 // import styles from './Post.module.scss';
-import { Route } from '../../routes/blog/$postId';
+import { Route } from '../routes/blog/$postId';
 
 function Post() {
     const { postId } = Route.useParams();
