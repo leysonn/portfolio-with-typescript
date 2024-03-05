@@ -1,0 +1,17 @@
+.projects-content {
+    .projects-container {
+        @apply w-292.5 grid grid-cols-3 gap-7.5 items-center mx-auto;
+    }
+
+    .button {
+        @apply block mx-auto mt-20 mb-28;
+    }
+
+    .hidden {
+        @apply invisible;
+    }
+}
+
+.projects-selector {
+    @apply w-142.5 flex justify-between mx-auto my-17;
+}
