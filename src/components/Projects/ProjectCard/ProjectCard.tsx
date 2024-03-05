@@ -4,7 +4,7 @@ import styles from './ProjectCard.module.scss';
 
 function ProjectCard({ project }: { project: ProjectItem }) {
     return (
-        <Link to={'/project/' + project.id} className={styles.projectCard}>
+        <Link to={'/project/' + project.id} mask={{ to: '/' + project.name.replace(' ', '-').toLowerCase() }} className={styles.projectCard}>
             <div className={styles.imageContainer}>
                 <img className={styles.image} src={project.images.main} alt=" " draggable={false} />
                 <div className={styles.mask} />
