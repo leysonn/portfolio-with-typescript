@@ -4,7 +4,7 @@
     @apply h-10 flex;
 
     button {
-        @apply text-dark-gray self-end;
+        @apply text-dark-gray self-end transition-colors;
         @include text;
     }
 
