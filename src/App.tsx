@@ -1,7 +1,7 @@
 import { Outlet, ScrollRestoration } from '@tanstack/react-router';
 import Navbar from './components/Navbar/Navbar';
 
-function Root() {
+function App() {
     return (
         <>
             <ScrollRestoration />
@@ -11,4 +11,4 @@ function Root() {
     );
 }
 
-export default Root;
+export default App;
