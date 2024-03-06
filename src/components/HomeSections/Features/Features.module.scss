@@ -1,29 +1,17 @@
 @import '../../../styles/fonts';
 
 .features-content {
-    @apply xl:w-292.5 flex flex-row-reverse xl:justify-end justify-center flex-wrap sm:flex-nowrap sm:gap-3 xl:gap-42.7 2xl:gap-40 mx-auto;
+    @apply flex-row-reverse xl:justify-end justify-center sm:gap-3 xl:gap-42.7 2xl:gap-40 mx-auto;
 
     .title-container {
-        @apply w-mobile lg:w-117.5 lg:mt-67 sm:my-20;
-
-        .name {
-            @apply text-light-accent;
-            @include h5;
-        }
+        @apply lg:mt-67 sm:my-20;
 
         .title {
-            @apply max-w-100 text-dark md:my-6 mt-4 mb-3;
+            @apply max-w-100 md:my-6 mt-4 mb-3;
             @media (min-width: 1024px) {
                 @include h2;
             }
-            @media (max-width: 1023px) {
-                @include h3;
-            }
-        }
-
-        .description {
-            @apply text-dark max-w-117.5;
-            @include text_big;
+            @include h3;
         }
 
         .features {
@@ -59,18 +47,13 @@
 }
 
 .features-cards {
-    @apply xl:w-292.5 flex xl:justify-end justify-center flex-wrap sm:flex-nowrap sm:gap-3 xl:gap-32.5 2xl:gap-40 mx-auto;
+    @apply xl:justify-end justify-center sm:gap-3 xl:gap-32.5 2xl:gap-40;
 
     .title-container {
         @apply lg:w-92 w-mobile sm:mt-69.5 mt-32.5;
 
-        .name {
-            @apply text-light-accent;
-            @include h5;
-        }
-
         .description {
-            @apply text-dark max-w-117.5 mt-7.5 mb-7;
+            @apply text-dark mt-7.5 mb-7;
             @include text_big;
         }
     }

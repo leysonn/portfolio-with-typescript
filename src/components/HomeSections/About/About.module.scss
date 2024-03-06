@@ -1,38 +1,26 @@
 @import '../../../styles/fonts';
 
 .about-content {
-    @apply xl:w-292.5 flex xl:justify-end justify-center flex-wrap sm:flex-nowrap sm:gap-3 lg:gap-32.5 2xl:gap-40 mx-auto;
+    @apply xl:justify-end justify-center sm:gap-3 lg:gap-32.5 2xl:gap-40;
 
-    .title_container {
-        @apply w-mobile lg:w-130 lg:my-42.7 sm:my-20;
-
-        .name {
-            @apply text-light-accent;
-            @include h5;
-        }
+    .title-container {
+        @apply lg:my-42.7 md:my-20;
 
         .title {
-            @apply text-dark md:my-6 mt-4.5 mb-7.5;
+            @apply md:my-6 mt-4.5 mb-7.5;
+
             @media (min-width: 1024px) {
                 @include h2;
             }
-            @media (max-width: 1023px) {
-                @include h3;
-            }
+            @include h3;
         }
-
-        .subtitle {
-            @apply text-dark;
-            @include text_big;
-        }
-
+    
         .description {
-            @apply text-dark-gray max-w-120 md:my-4 mt-4.5;
-            @include text;
+            @apply mt-4.5;
         }
-
+    
         .button {
-            @apply md:mt-4.5 mt-8;
+            @apply mt-8.5;
         }
     }
 

@@ -1,24 +1,18 @@
 @import '../../../styles/fonts';
 
 .how-we-work-content {
-    @apply xl:w-292.5 lg:w-250 md:w-180 sm:w-100 w-mobile flex md:justify-start justify-center flex-wrap md:flex-nowrap sm:gap-3 lg:gap-32.5 md:gap-11 2xl:gap-40 mx-auto;
+    @apply xl:justify-start justify-center sm:gap-3 lg:gap-32.5 md:gap-11 2xl:gap-40;
 
-    .title_container {
-        @apply lg:w-117.5 md:w-100 w-mobile lg:mt-35 mt-8.5;
-
-        .name {
-            @apply text-light-accent;
-            @include h5;
-        }
+    .title-container {
+        @apply lg:mt-35 mt-8.5;
 
         .title {
-            @apply text-dark mt-4 md:mb-8 mb-3.5;
+            @apply mt-4 md:mb-8 mb-3.5;
             @include h3;
         }
 
         .description {
-            @apply text-dark-gray max-w-120 md:my-4;
-            @include text;
+            @apply md:my-4;
         }
 
         .button {

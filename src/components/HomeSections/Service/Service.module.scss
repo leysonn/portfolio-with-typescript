@@ -1,29 +1,17 @@
 @import '../../../styles/fonts';
 
 .service-content {
-    @apply xl:w-292.5 flex xl:justify-end justify-center flex-wrap sm:flex-nowrap sm:gap-3 lg:gap-30 mx-auto;
+    @apply xl:justify-end justify-center sm:gap-3 lg:gap-30;
 
     .title-container {
-        @apply w-mobile lg:w-130 lg:mt-63 sm:mt-20;
-
-        .name {
-            @apply text-light-accent;
-            @include h5;
-        }
+        @apply lg:mt-63 sm:mt-20;
 
         .title {
-            @apply text-dark md:mt-5 md:mb-6.5 mt-3 mb-4;
+            @apply md:mt-5 md:mb-6.5 mt-3 mb-4;
             @media (min-width: 1024px) {
                 @include h2;
             }
-            @media (max-width: 1023px) {
-                @include h3;
-            }
-        }
-
-        .description {
-            @apply text-dark max-w-120;
-            @include text;
+            @include h3;
         }
 
         .button {
