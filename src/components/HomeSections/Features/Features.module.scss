@@ -1,7 +1,7 @@
 @import '../../../styles/fonts';
 
 .features-content {
-    @apply flex-row-reverse xl:justify-end justify-center sm:gap-3 xl:gap-42.7 2xl:gap-40 mx-auto;
+    @apply flex-row-reverse xl:justify-end justify-center sm:gap-3 xl:gap-42.7;
 
     .title-container {
         @apply lg:mt-67 sm:my-20;
