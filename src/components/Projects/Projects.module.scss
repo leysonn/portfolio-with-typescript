@@ -1,6 +1,6 @@
 .projects-content {
     .projects-container {
-        @apply w-292.5 grid grid-cols-3 gap-7.5 items-center mx-auto;
+        @apply xl:w-292.5 lg:w-250 md:w-180 sm:w-130 w-mobile grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7.5 items-center mx-auto;
     }
 
     .button {
