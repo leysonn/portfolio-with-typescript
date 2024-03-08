@@ -13,5 +13,9 @@
 }
 
 .projects-selector {
-    @apply w-142.5 flex justify-between mx-auto my-17;
+    @apply w-142.5 sm:flex justify-between mx-auto my-17 hidden;
+}
+
+.projects-dropdown {
+    @apply w-mobile mx-auto mt-8 mb-12;
 }
