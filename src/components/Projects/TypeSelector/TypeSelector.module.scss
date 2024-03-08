@@ -13,7 +13,7 @@
     }
 
     .count {
-        @apply text-dark-gray;
+        @apply text-dark-gray cursor-default;
         @include text_small;
     }
 }
