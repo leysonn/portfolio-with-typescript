@@ -17,5 +17,5 @@
 }
 
 .projects-dropdown {
-    @apply w-mobile mx-auto mt-8 mb-12;
+    @apply w-mobile mx-auto mt-8 mb-12 sm:hidden block;
 }
