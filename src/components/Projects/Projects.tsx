@@ -16,10 +16,12 @@ function Projects() {
 
     function handleSelectorClick(event: React.MouseEvent<HTMLButtonElement>): void {
         setSelectedType(event.currentTarget.innerText);
+        setProjectsCount(9);
     }
 
     function handleDropdownChange(event: React.ChangeEvent<HTMLSelectElement>): void {
         setSelectedType(event.currentTarget.value);
+        setProjectsCount(9);
     }
 
     return (
@@ -56,7 +58,7 @@ function Projects() {
                     ))}
                 </div>
                 <Button
-                    className={styles.button + (projectsCount >= projectsList.projects.length ? ' ' + styles.hidden : '')}
+                    className={styles.button + (projectsCount >= sortedProjects[selectedType].length ? ' ' + styles.hidden : '')}
                     width={10.62}
                     color="light"
                     onClick={() => setProjectsCount(projectsCount + 9)}
