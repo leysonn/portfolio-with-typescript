@@ -1,0 +1,31 @@
+@import '../../../styles/fonts';
+
+.project-card {
+    @apply h-104 overflow-hidden rounded-md relative;
+
+    .image-container {
+        @apply w-full h-full relative;
+
+        .image {
+            @apply w-full h-full;
+        }
+
+        .mask {
+            @apply absolute top-0 left-0 w-full h-full bg-brown opacity-30;
+        }
+    }
+
+    .project-text {
+        @apply absolute bottom-13 left-12;
+
+        .type {
+            @apply text-dark px-4 py-2.5 bg-light rounded-full;
+            @include text;
+        }
+
+        .title {
+            @apply text-light mt-5;
+            @include h3;
+        }
+    }
+}

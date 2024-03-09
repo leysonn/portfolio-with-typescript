@@ -1,0 +1,18 @@
+@import '../../../styles/fonts';
+
+.dropdownContainer {
+    @apply relative;
+
+    .dropdown {
+        @apply w-full h-12 px-4 rounded-md border border-solid border-orange-dark text-dark-gray appearance-none cursor-pointer bg-light;
+        @include text;
+
+        &:focus {
+            @apply border-light-accent outline-none;
+        }
+
+        &-icon {
+            @apply absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer;
+        }
+    }
+}

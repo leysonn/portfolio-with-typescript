@@ -1,0 +1,21 @@
+.projects-content {
+    .projects-container {
+        @apply xl:w-292.5 lg:w-250 md:w-180 sm:w-130 w-mobile grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7.5 items-center mx-auto;
+    }
+
+    .button {
+        @apply block mx-auto mt-20 mb-28;
+    }
+
+    .hidden {
+        @apply invisible;
+    }
+}
+
+.projects-selector {
+    @apply w-142.5 sm:flex justify-between mx-auto my-17 hidden;
+}
+
+.projects-dropdown {
+    @apply w-mobile mx-auto mt-8 mb-12 sm:hidden block;
+}

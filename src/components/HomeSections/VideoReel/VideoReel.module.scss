@@ -1,0 +1,22 @@
+@import '../../../styles/fonts';
+
+.video-reel-content {
+    @apply xl:justify-start justify-center sm:gap-3 md:gap-15 lg:gap-8 xl:gap-32.5;
+
+    .title_container {
+        @apply lg:mt-46.7 sm:mt-20 mt-6;
+
+        .title {
+            @apply md:my-6 mt-4.5 mb-7;
+            @include h3;
+        }
+
+        .description {
+            @apply md:my-4 mt-4.5;
+        }
+
+        .button {
+            @apply md:mt-4.5 mt-8;
+        }
+    }
+}

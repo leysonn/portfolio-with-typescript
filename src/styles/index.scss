@@ -12,10 +12,14 @@
     border: 0;
 }
 
-#root > :last-child {
+#root > :nth-child(2) {
     @apply mt-20;
 }
 
 html {
     @apply scroll-smooth;
+}
+
+body {
+    @apply bg-orange-light;
 }

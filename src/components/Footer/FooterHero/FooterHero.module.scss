@@ -1,0 +1,39 @@
+@import '../../../styles/fonts';
+
+.contact-footer-content {
+    @apply xl:w-292.5 lg:w-250 md:w-180 sm:w-120 w-mobile flex-row-reverse justify-center sm:gap-1 xl:gap-14 bg-light-accent rounded-md;
+
+    .title-container {
+        @apply lg:mt-24 sm:my-20 lg:w-117.5 sm:w-mobile w-68;
+
+        .title {
+            @apply text-light;
+            @media (min-width: 1024px) {
+                @include h2;
+            }
+            @include h3;
+        }
+
+        .description {
+            @apply text-light-gray sm:mt-7 mt-4;
+        }
+
+        .button {
+            @apply sm:mt-8.5 sm:mb-0 mt-5 mb-12;
+        }
+    }
+
+    .image {
+        @apply lg:mt-5 md:mt-20 mt-8 mb-9;
+        @media (min-width: 640px) {
+            @apply lg:w-120 lg:h-120 w-80 h-80;
+        }
+        @media (min-width: 1280px) {
+            @apply mt-10;
+            width: 27.75rem;
+            height: 27rem;
+        }
+        width: 17.06rem;
+        height: 16.5rem;
+    }
+}

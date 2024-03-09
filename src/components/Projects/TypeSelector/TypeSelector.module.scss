@@ -1,0 +1,19 @@
+@import '../../../styles/fonts';
+
+.type-selector {
+    @apply h-10 flex;
+
+    button {
+        @apply text-dark-gray self-end transition-colors;
+        @include text;
+    }
+
+    .active {
+        @apply text-dark;
+    }
+
+    .count {
+        @apply text-dark-gray cursor-default;
+        @include text_small;
+    }
+}

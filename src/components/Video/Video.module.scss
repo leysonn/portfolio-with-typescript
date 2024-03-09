@@ -1,0 +1,38 @@
+@import '../../styles/fonts';
+
+.video-wrapper {
+    @apply relative lg:w-142.5 w-mobile sm:mt-32 mt-16;
+
+    .video {
+        @apply absolute top-0 left-0 w-full h-full;
+    }
+
+    .preview {
+        @apply relative w-full h-full;
+
+        .image-container {
+            @apply relative w-full h-full rounded-md overflow-hidden;
+
+            .image {
+                @apply w-full h-full;
+            }
+
+            .mask {
+                @apply absolute top-0 left-0 w-full h-full bg-brown opacity-30;
+            }
+
+            .play-button {
+                @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 rounded-xl transition-colors;
+
+                &:hover {
+                    @apply bg-dark bg-opacity-40;
+                }
+            }
+        }
+
+        .duration {
+            @apply absolute bottom-5 left-6 w-12 text-light text-center bg-vinous bg-opacity-25 rounded-md;
+            @include text;
+        }
+    }
+}

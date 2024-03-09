@@ -1,0 +1,48 @@
+@import '../../../styles/fonts';
+
+.about-content {
+    @apply xl:justify-end justify-center sm:gap-3 lg:gap-32.5 2xl:gap-40;
+
+    .title-container {
+        @apply lg:my-42.7 md:my-20;
+
+        .title {
+            @apply md:my-6 mt-4.5 mb-7.5;
+
+            @media (min-width: 1024px) {
+                @include h2;
+            }
+            @include h3;
+        }
+    
+        .description {
+            @apply mt-4.5;
+        }
+    
+        .button {
+            @apply mt-8.5;
+        }
+    }
+
+    .about-image {
+        @apply lg:w-120 lg:h-120 lg:mt-40 mt-18 mb-4;
+        @media (min-width: 1280px) {
+            @apply my-25;
+            width: 35.38rem;
+            height: 36.56rem;
+        }
+        @media (max-width: 1023px) {
+            @apply w-mobile;
+            height: 21.25rem;
+        }
+    }
+}
+
+.stat-container {
+    @apply flex md:flex-row justify-center border border-solid border-orange-dark rounded-md mx-auto my-15 
+        xl:w-288.5 lg:w-250 md:w-180 sm:w-96 flex-col w-mobile overflow-hidden;
+
+    & > :last-child {
+        @apply border-none;
+    }
+}
