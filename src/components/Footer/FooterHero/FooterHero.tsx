@@ -1,10 +1,10 @@
 import { Link } from '@tanstack/react-router';
-import Section from '../Section/Section';
-import styles from './FooterSection.module.scss';
-import Button from '../Button/Button';
-import contactFooterImage from '../../assets/images/footerImage.png'
+import Section from '../../Section/Section';
+import styles from './FooterHero.module.scss';
+import Button from '../../Button/Button';
+import contactFooterImage from '../../../assets/images/footerImage.png'
 
-function FooterSection() {
+function FooterHero() {
     return (
         <section id="contact-footer">
             <Section
@@ -24,4 +24,4 @@ function FooterSection() {
     );
 }
 
-export default FooterSection;
+export default FooterHero;

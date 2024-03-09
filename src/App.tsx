@@ -1,6 +1,6 @@
 import { Outlet, ScrollRestoration } from '@tanstack/react-router';
 import Navbar from './components/Navbar/Navbar';
-import FooterSection from './components/FooterSection/FooterSection';
+import Footer from './components/Footer/Footer';
 
 function App() {
     return (
@@ -8,7 +8,7 @@ function App() {
             <ScrollRestoration />
             <Navbar />
             <Outlet />
-            <FooterSection />
+            <Footer />
         </>
     );
 }

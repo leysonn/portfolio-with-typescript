@@ -1,0 +1,78 @@
+@import '../../styles/fonts';
+
+.footer-content {
+    @apply xl:w-292.5
+        lg:w-250
+        md:w-180
+        sm:w-120
+        w-mobile
+        mx-auto
+        mt-20
+        md:mb-17
+        mb-16
+        flex
+        md:flex-nowrap
+        flex-wrap
+        justify-between;
+
+    .footer-container {
+        @apply sm:w-auto w-full flex sm:flex-row flex-col sm:items-start items-center sm:gap-0 gap-12;
+
+        .footer-title {
+            @apply text-dark sm:mt-2 mt-6;
+            @include h4;
+        }
+
+        .footer-col {
+            @apply w-22.5 lg:ml-52.5 sm:ml-25 sm:mt-3;
+
+            &-title {
+                @apply text-light-accent sm:text-left text-center;
+                @include h5;
+            }
+
+            &-container {
+                @apply flex flex-col mt-4 text-dark sm:text-left text-center;
+                @include text;
+            }
+        }
+    }
+
+    .footer-social {
+        @apply flex gap-2 md:m-0 mx-auto mt-13;
+
+        .social-link {
+            @apply bg-light-accent w-12 h-12 p-4 rounded-full;
+        }
+    }
+}
+
+.footer-bottom {
+    @apply xl:w-292.5
+    lg:w-250
+    md:w-180
+    sm:w-120
+    w-mobile 
+    mx-auto
+    mt-11
+    mb-12.5
+    flex
+    md:flex-nowrap
+    flex-wrap
+    md:justify-between
+    justify-center;
+
+    .copyright {
+        @apply text-dark-gray sm:text-left text-center sm:w-auto w-50;
+        @include text;
+    }
+
+    .footer-links {
+        @apply flex gap-17 sm:mt-0 mt-8;
+
+        .link {
+            @apply text-dark;
+            @include text;
+        }
+    }
+}
