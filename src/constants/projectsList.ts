@@ -1,4 +1,4 @@
-import project1_image from '../assets/images/projects/project1.png';
+import project1_image from '../assets/images/projects/1/project1.png';
 
 export type ProjectsList = {
     types: string[];
