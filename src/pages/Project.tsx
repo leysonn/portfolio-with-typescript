@@ -2,6 +2,7 @@ import { Route } from '../routes/portfolio/$projectId';
 import { ProjectItem, projectsList } from '../constants/projectsList';
 import Title from '../components/Title/Title';
 import ProjectTitle from '../components/Project/ProjectTitle/ProjectTitle';
+import Back from '../components/Back/Back';
 
 function Project() {
     const { projectId } = Route.useParams();
@@ -16,7 +17,7 @@ function Project() {
 
     return (
         <main>
-            {/* <Back to="/portfolio" url="/portfolio" /> */}
+            <Back to="portfolio" url="/portfolio" />
             <ProjectTitle project={project} />
             {/* <ProjectInfo /> */}
             {/* <img /> */}
