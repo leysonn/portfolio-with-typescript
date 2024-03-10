@@ -1,7 +1,7 @@
 @import '../../../styles/fonts';
 
 .info-container {
-    @apply sm:w-142.5 w-86 sm:h-52.5 flex flex-col flex-wrap mx-auto sm:mt-13.5 mt-15;
+    @apply sm:w-142.5 w-mobile sm:h-52.5 flex flex-col flex-wrap mx-auto sm:mt-13.5 mt-15;
 
     .title {
         @apply text-light-accent mb-4;
