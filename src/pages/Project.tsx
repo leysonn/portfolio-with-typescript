@@ -1,8 +1,9 @@
 import { Route } from '../routes/portfolio/$projectId';
 import { ProjectItem, projectsList } from '../constants/projectsList';
 import Title from '../components/Title/Title';
-import ProjectTitle from '../components/Project/ProjectTitle/ProjectTitle';
 import Back from '../components/Back/Back';
+import ProjectTitle from '../components/Project/ProjectTitle/ProjectTitle';
+import ProjectInfo from '../components/Project/ProjectInfo/ProjectInfo';
 
 function Project() {
     const { projectId } = Route.useParams();
@@ -19,7 +20,7 @@ function Project() {
         <main>
             <Back to="portfolio" url="/portfolio" />
             <ProjectTitle project={project} />
-            {/* <ProjectInfo /> */}
+            <ProjectInfo project={project} />
             {/* <img /> */}
             {/* <ProjectSection title="Problem" description={} /> */}
             {/* <Images /> */}

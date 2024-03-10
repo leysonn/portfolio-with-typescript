@@ -1,4 +1,5 @@
 import project1_image from '../assets/images/projects/1/project1.png';
+import client_logo1 from '../assets/images/partners/logo2.png';
 
 export type ProjectsList = {
     types: string[];
@@ -43,7 +44,7 @@ export const projectsList: ProjectsList = {
             description:
                 'Outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.',
             categories: ['Art Direction', 'User Interface', 'Branding Strategy', 'Print Design', '3D Render'],
-            client: { name: 'company', logo: 'src', url: 'url' },
+            client: { name: 'Vortex', logo: client_logo1, url: '#!' },
             date: new Date('12-01-2021'),
             problem:
                 "Ability to put themselves in the merchant's shoes. It is meant to partner on the long run, and work as an extension of the merchant's team.\n\nA digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.",
