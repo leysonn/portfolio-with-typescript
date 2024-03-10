@@ -1,6 +1,7 @@
 import FooterHero from './FooterHero/FooterHero';
 import styles from './Footer.module.scss';
 import Hr from '../Hr/Hr';
+import SocialLink from '../SocialLink/SocialLink';
 import { Link } from '@tanstack/react-router';
 import { footerLinks } from '../../constants/footerLinks';
 
@@ -34,9 +35,7 @@ function Footer() {
                 </div>
                 <div className={styles.footerSocial}>
                     {footerLinks.social.map((link, index) => (
-                        <Link to={link.url} target="_blank" key={index}>
-                            <img className={styles.socialLink} src={link.icon} alt=" " draggable={false} />
-                        </Link>
+                        <SocialLink link={link} key={index} />
                     ))}
                 </div>
             </div>
