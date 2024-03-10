@@ -1,0 +1,14 @@
+@import '../../../styles/fonts';
+
+.share {
+    @apply flex flex-col justify-center items-center gap-6 mb-16;
+
+    .title {
+        @apply text-dark-gray;
+        @include text_small;
+    }
+
+    .links {
+        @apply flex gap-2;
+    }
+}

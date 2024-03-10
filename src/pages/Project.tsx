@@ -6,6 +6,7 @@ import ProjectTitle from '../components/Project/ProjectTitle/ProjectTitle';
 import ProjectInfo from '../components/Project/ProjectInfo/ProjectInfo';
 import ProjectSection from '../components/Project/ProjectSection/ProjectSection';
 import ProjectImages from '../components/Project/ProjectImages/ProjectImages';
+import ProjectShare from '../components/Project/ProjectShare/ProjectShare';
 
 function Project() {
     const { projectId } = Route.useParams();
@@ -27,7 +28,7 @@ function Project() {
             <ProjectSection title="Problem" description={project.problem} />
             <ProjectImages project={project} />
             <ProjectSection title="Solution" description={project.solution} />
-            {/* <Share /> */}
+            <ProjectShare />
             {/* <Hr /> */}
             {/* <RelatedProjects /> */}
         </main>
