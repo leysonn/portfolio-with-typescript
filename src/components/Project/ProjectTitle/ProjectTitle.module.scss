@@ -5,7 +5,7 @@
 
     .title {
         @apply text-dark mt-2.5;
-        @media (min-width: 768px) {
+        @media (min-width: 640px) {
             @include h1;
         }
         @include h2;
