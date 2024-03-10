@@ -21,6 +21,6 @@
     }
 
     .video {
-        @apply lg:h-92 h-52;
+        @apply lg:h-92 h-52 sm:mt-32 mt-16;
     }
 }
