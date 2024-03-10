@@ -1,4 +1,11 @@
 import project1_image from '../assets/images/projects/1/project1.png';
+import project2_image from '../assets/images/projects/1/project2.png';
+import project3_image from '../assets/images/projects/1/project3.png';
+import project4_image from '../assets/images/projects/1/project4.png';
+import project5_image from '../assets/images/projects/1/project5.png';
+import project_preview from '../assets/images/projects/1/preview.png';
+import project_video_mp4 from '../assets/videos/test-video.mp4';
+import project_video_webm from '../assets/videos/test-video.webm';
 import client_logo1 from '../assets/images/partners/logo2.png';
 
 export type ProjectsList = {
@@ -14,7 +21,11 @@ export type ProjectItem = {
         main: string;
         other: string[];
     };
-    video: string;
+    video: {
+        preview: string;
+        webm?: string;
+        mp4: string;
+    };
     title: string;
     description: string;
     categories: string[];
@@ -37,9 +48,13 @@ export const projectsList: ProjectsList = {
             type: 'Branding',
             images: {
                 main: project1_image,
-                other: ['src', 'src', 'src'],
+                other: [project2_image, project3_image, project4_image, project5_image],
             },
-            video: 'src',
+            video: {
+                preview: project_preview,
+                mp4: project_video_mp4,
+                webm: project_video_webm,
+            },
             title: 'Work Media Project',
             description:
                 'Outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.',
@@ -59,7 +74,10 @@ export const projectsList: ProjectsList = {
                 main: project1_image,
                 other: ['src', 'src', 'src'],
             },
-            video: 'src',
+            video: {
+                preview: 'src',
+                mp4: 'src',
+            },
             title: 'Project',
             description: 'paragraph',
             categories: ['Art Direction', 'User Interface', 'Branding Strategy', 'Print Design', '3D Render'],
@@ -76,7 +94,10 @@ export const projectsList: ProjectsList = {
                 main: project1_image,
                 other: ['src', 'src', 'src'],
             },
-            video: 'src',
+            video: {
+                preview: 'src',
+                mp4: 'src',
+            },
             title: 'Project',
             description: 'paragraph',
             categories: ['Art Direction', 'User Interface', 'Branding Strategy', 'Print Design', '3D Render'],
@@ -93,7 +114,10 @@ export const projectsList: ProjectsList = {
                 main: project1_image,
                 other: ['src', 'src', 'src'],
             },
-            video: 'src',
+            video: {
+                preview: 'src',
+                mp4: 'src',
+            },
             title: 'Project',
             description: 'paragraph',
             categories: ['Art Direction', 'User Interface', 'Branding Strategy', 'Print Design', '3D Render'],
@@ -110,7 +134,10 @@ export const projectsList: ProjectsList = {
                 main: project1_image,
                 other: ['src', 'src', 'src'],
             },
-            video: 'src',
+            video: {
+                preview: 'src',
+                mp4: 'src',
+            },
             title: 'Project',
             description: 'paragraph',
             categories: ['Art Direction', 'User Interface', 'Branding Strategy', 'Print Design', '3D Render'],
@@ -127,7 +154,10 @@ export const projectsList: ProjectsList = {
                 main: project1_image,
                 other: ['src', 'src', 'src'],
             },
-            video: 'src',
+            video: {
+                preview: 'src',
+                mp4: 'src',
+            },
             title: 'Project',
             description: 'paragraph',
             categories: ['Art Direction', 'User Interface', 'Branding Strategy', 'Print Design', '3D Render'],
@@ -144,7 +174,10 @@ export const projectsList: ProjectsList = {
                 main: project1_image,
                 other: ['src', 'src', 'src'],
             },
-            video: 'src',
+            video: {
+                preview: 'src',
+                mp4: 'src',
+            },
             title: 'Project',
             description: 'paragraph',
             categories: ['Art Direction', 'User Interface', 'Branding Strategy', 'Print Design', '3D Render'],
@@ -161,7 +194,10 @@ export const projectsList: ProjectsList = {
                 main: project1_image,
                 other: ['src', 'src', 'src'],
             },
-            video: 'src',
+            video: {
+                preview: 'src',
+                mp4: 'src',
+            },
             title: 'Project',
             description: 'paragraph',
             categories: ['Art Direction', 'User Interface', 'Branding Strategy', 'Print Design', '3D Render'],
@@ -178,7 +214,10 @@ export const projectsList: ProjectsList = {
                 main: project1_image,
                 other: ['src', 'src', 'src'],
             },
-            video: 'src',
+            video: {
+                preview: 'src',
+                mp4: 'src',
+            },
             title: 'Project',
             description: 'paragraph',
             categories: ['Art Direction', 'User Interface', 'Branding Strategy', 'Print Design', '3D Render'],
@@ -195,7 +234,10 @@ export const projectsList: ProjectsList = {
                 main: project1_image,
                 other: ['src', 'src', 'src'],
             },
-            video: 'src',
+            video: {
+                preview: 'src',
+                mp4: 'src',
+            },
             title: 'Work Media Project',
             description:
                 'Outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.',
@@ -215,7 +257,10 @@ export const projectsList: ProjectsList = {
                 main: project1_image,
                 other: ['src', 'src', 'src'],
             },
-            video: 'src',
+            video: {
+                preview: 'src',
+                mp4: 'src',
+            },
             title: 'Project',
             description: 'paragraph',
             categories: ['Art Direction', 'User Interface', 'Branding Strategy', 'Print Design', '3D Render'],
@@ -232,7 +277,10 @@ export const projectsList: ProjectsList = {
                 main: project1_image,
                 other: ['src', 'src', 'src'],
             },
-            video: 'src',
+            video: {
+                preview: 'src',
+                mp4: 'src',
+            },
             title: 'Project',
             description: 'paragraph',
             categories: ['Art Direction', 'User Interface', 'Branding Strategy', 'Print Design', '3D Render'],
@@ -249,7 +297,10 @@ export const projectsList: ProjectsList = {
                 main: project1_image,
                 other: ['src', 'src', 'src'],
             },
-            video: 'src',
+            video: {
+                preview: 'src',
+                mp4: 'src',
+            },
             title: 'Project',
             description: 'paragraph',
             categories: ['Art Direction', 'User Interface', 'Branding Strategy', 'Print Design', '3D Render'],
@@ -266,7 +317,10 @@ export const projectsList: ProjectsList = {
                 main: project1_image,
                 other: ['src', 'src', 'src'],
             },
-            video: 'src',
+            video: {
+                preview: 'src',
+                mp4: 'src',
+            },
             title: 'Project',
             description: 'paragraph',
             categories: ['Art Direction', 'User Interface', 'Branding Strategy', 'Print Design', '3D Render'],

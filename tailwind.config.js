@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    './src/pages/**/*.{html,ts,tsx,scss}',
-    './src/components/**/*.{html,ts,tsx,scss}',
+    './src/**/*.{html,ts,tsx,scss}',
     './index.html',
   ],
   theme: {
@@ -45,6 +44,7 @@ export default {
         "35": "8.75rem",
         "36.5": "9.125rem",
         "37": "9.25rem",
+        "39": "9.75rem",
         "42.7": "10.675rem",
         "46.7": "11.675rem",
         "50": "12.5rem",
@@ -62,6 +62,7 @@ export default {
         "97.7": "24.425rem",
         "100": "25rem",
         "104": "26rem",
+        "112": "28rem",
         "117.5": "29.375rem",
         "120": "30rem",
         "125.5": "31.375rem",

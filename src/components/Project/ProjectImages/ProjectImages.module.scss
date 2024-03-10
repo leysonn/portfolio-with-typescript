@@ -1,0 +1,15 @@
+.images-container {
+    @apply xl:w-292.5 lg:w-250 md:w-180 sm:w-120 w-mobile mx-auto flex flex-wrap xl:justify-between justify-center items-center xl:gap-0 sm:gap-7.5 gap-4;
+
+    .video {
+        @apply lg:h-112 h-[16.19rem];
+    }
+
+    .images {
+        @apply grid grid-rows-2 grid-cols-2 sm:gap-7.5 gap-4;
+
+        .image {
+            @apply lg:w-[16.88rem] lg:h-52 w-39 h-30;
+        }
+    }
+}

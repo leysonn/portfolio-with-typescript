@@ -1,7 +1,7 @@
 @import '../../../styles/fonts';
 
 .section-container {
-    @apply sm:w-142.5 w-mobile mx-auto sm:mt-19.25 mt-20;
+    @apply sm:w-142.5 w-mobile mx-auto sm:mt-19.25 mt-20 mb-16;
 
     .title {
         @apply text-dark;
