@@ -1,9 +1,14 @@
 @import '../../styles/fonts';
+@import '../../styles/colors';
 
 .social-link {
     @apply w-12 h-12 rounded-full;
 
     .social-link-icon {
-        @apply bg-light-accent w-full h-full p-4 rounded-full;
+        @apply bg-light-accent w-full h-full p-4 rounded-full transition-colors;
+
+        &:hover {
+            background-color: darken($color: $light-accent, $amount: 5);
+        }
     }
 }

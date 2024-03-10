@@ -9,7 +9,7 @@
         @apply grid grid-rows-2 grid-cols-2 sm:gap-7.5 gap-4;
 
         .image {
-            @apply lg:w-[16.88rem] lg:h-52 w-39 h-30;
+            @apply lg:w-[16.88rem] lg:h-52 w-39 h-30 object-cover object-left;
         }
     }
 }
