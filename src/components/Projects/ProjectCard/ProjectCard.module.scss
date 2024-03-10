@@ -7,7 +7,7 @@
         @apply w-full h-full relative;
 
         .image {
-            @apply w-full h-full;
+            @apply h-full w-full object-cover object-left;
         }
 
         .mask {

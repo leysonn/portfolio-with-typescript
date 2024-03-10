@@ -21,7 +21,7 @@ function Project() {
             <Back to="portfolio" url="/portfolio" />
             <ProjectTitle project={project} />
             <ProjectInfo project={project} />
-            {/* <img /> */}
+            <img className="mx-auto mt-17" src={project.images.main} alt='Project image' />
             {/* <ProjectSection title="Problem" description={} /> */}
             {/* <Images /> */}
             {/* <ProjectSection title="Solution" description={} /> */}
