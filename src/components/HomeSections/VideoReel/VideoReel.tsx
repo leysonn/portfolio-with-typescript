@@ -18,7 +18,7 @@ function VideoReel() {
                     style: styles.description,
                 }}
                 aside={{
-                    element: <Video preview={preview} video_mp4={video_mp4} webm video_webm={video_webm} height={{ default: 92, mobile: 52 }} />,
+                    element: <Video preview={preview} video_mp4={video_mp4} webm video_webm={video_webm} className={styles.video} />,
                     position: 'before',
                 }}
             />

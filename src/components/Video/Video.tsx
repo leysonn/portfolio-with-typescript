@@ -7,14 +7,11 @@ type VideoProps = {
     preview: string;
     video_mp4: string;
     webm?: boolean;
-    video_webm: string;
-    height: {
-        default: number;
-        mobile: number;
-    };
+    video_webm?: string;
+    className?: string;
 };
 
-function Video({ preview, video_mp4, webm = false, video_webm, height }: VideoProps) {
+function Video({ preview, video_mp4, webm = false, video_webm, className }: VideoProps) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [duration, setMetadata] = useVideoDuration();
 
@@ -23,7 +20,7 @@ function Video({ preview, video_mp4, webm = false, video_webm, height }: VideoPr
     }
 
     return (
-        <div className={`${styles.videoWrapper} lg:h-${height.default} h-${height.mobile}`}>
+        <div className={styles.videoWrapper + ' ' + className}>
             <video className={styles.video} onLoadedMetadata={setMetadata} hidden={!isPlaying} controls muted autoPlay>
                 <source src={video_mp4} type="video/mp4" />
                 {webm ? <source src={video_webm} type="video/webm" /> : null}

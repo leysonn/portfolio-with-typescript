@@ -19,4 +19,8 @@
             @apply md:mt-4.5 mt-8;
         }
     }
+
+    .video {
+        @apply lg:h-92 h-52;
+    }
 }
