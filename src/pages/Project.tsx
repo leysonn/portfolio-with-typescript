@@ -4,6 +4,7 @@ import Title from '../components/Title/Title';
 import Back from '../components/Back/Back';
 import ProjectTitle from '../components/Project/ProjectTitle/ProjectTitle';
 import ProjectInfo from '../components/Project/ProjectInfo/ProjectInfo';
+import ProjectSection from '../components/Project/ProjectSection/ProjectSection';
 
 function Project() {
     const { projectId } = Route.useParams();
@@ -22,9 +23,9 @@ function Project() {
             <ProjectTitle project={project} />
             <ProjectInfo project={project} />
             <img className="mx-auto mt-17" src={project.images.main} alt='Project image' />
-            {/* <ProjectSection title="Problem" description={} /> */}
+            <ProjectSection title="Problem" description={project.problem} />
             {/* <Images /> */}
-            {/* <ProjectSection title="Solution" description={} /> */}
+            <ProjectSection title="Solution" description={project.solution} />
             {/* <Share /> */}
             {/* <Hr /> */}
             {/* <RelatedProjects /> */}

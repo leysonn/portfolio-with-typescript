@@ -1,0 +1,15 @@
+@import '../../../styles/fonts';
+
+.section-container {
+    @apply sm:w-142.5 w-mobile mx-auto sm:mt-19.25 mt-20;
+
+    .title {
+        @apply text-dark;
+        @include h3;
+    }
+
+    .description {
+        @apply text-dark-gray mt-7.5;
+        @include text;
+    }
+}
