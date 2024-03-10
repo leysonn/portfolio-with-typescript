@@ -1,9 +1,9 @@
 @import '../../styles/fonts';
 
 .social-link {
-    @apply w-12 h-12 rounded-full overflow-hidden;
+    @apply w-12 h-12 rounded-full;
 
     .social-link-icon {
-        @apply bg-light-accent w-full h-full p-4;
+        @apply bg-light-accent w-full h-full p-4 rounded-full;
     }
 }
