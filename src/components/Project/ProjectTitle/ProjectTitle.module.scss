@@ -1,0 +1,23 @@
+@import '../../../styles/fonts';
+
+.titleContainer {
+    @apply sm:w-142.5 w-86 flex flex-col mx-auto;
+
+    .title {
+        @apply text-dark mt-2.5;
+        @media (min-width: 768px) {
+            @include h1;
+        }
+        @include h2;
+    }
+
+    .subtitle {
+        @apply text-dark sm:mt-5 mt-6.5 sm:mb-8 mb-6;
+        @include text_big;
+    }
+
+    .description {
+        @apply text-dark-gray;
+        @include text;
+    }
+}
