@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { projectsList } from '../../constants/projectsList';
 import { sortProjects } from './sortProjects';
 import TypeSelector from './TypeSelector/TypeSelector';
-import ProjectCard from './ProjectCard/ProjectCard';
+import ProjectCard from '../ProjectCard/ProjectCard';
 import Dropdown from '../Form/Dropdown/Dropdown';
 import styles from './Projects.module.scss';
 import Button from '../Button/Button';
