@@ -8,14 +8,14 @@ type ProjectImagesProps = {
 
 function ProjectImages({ project }: ProjectImagesProps) {
     return (
-        <div className={styles.imagesContainer}>
+        <section className={styles.imagesContainer}>
             <Video preview={project.video.preview} video_mp4={project.video.mp4} webm video_webm={project.video.webm} className={styles.video} />
             <div className={styles.images}>
                 {project.images.other.map((image, index) => (
                     <img key={index} src={image} alt="Project image" className={styles.image} />
                 ))}
             </div>
-        </div>
+        </section>
     );
 }
 

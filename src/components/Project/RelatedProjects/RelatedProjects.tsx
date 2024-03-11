@@ -28,14 +28,14 @@ function RelatedProjects({ projects, currentProject }: RelatedProject) {
     }
 
     return (
-        <div className={styles.relatedProjects}>
+        <section className={styles.relatedProjects}>
             <h2 className={styles.title}>Related Projects</h2>
             <div className={styles.projects}>
                 {randomProjects.map((project, index) => (
                     <ProjectCard key={index} project={project} />
                 ))}
             </div>
-        </div>
+        </section>
     );
 }
 

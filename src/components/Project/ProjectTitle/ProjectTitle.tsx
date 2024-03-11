@@ -7,11 +7,11 @@ type ProjectTitleProps = {
 
 function ProjectTitle({ project }: ProjectTitleProps) {
     return (
-        <div className={styles.titleContainer}>
+        <section className={styles.titleContainer}>
             <h1 className={styles.title}>{project.title}</h1>
             <p className={styles.subtitle}>Agency provides a full service range including technical skills, design, business understanding.</p>
             <p className={styles.description}>{project.description}</p>
-        </div>
+        </section>
     );
 }
 

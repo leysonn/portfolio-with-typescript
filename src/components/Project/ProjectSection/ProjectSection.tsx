@@ -10,7 +10,7 @@ function ProjectSection({ title, description }: ProjectSectionProps) {
     const descriptionLines = description.split('\n');
 
     return (
-        <div className={styles.sectionContainer}>
+        <section className={styles.sectionContainer}>
             <h2 className={styles.title}>{title}</h2>
             <p className={styles.description}>
                 {descriptionLines.map((line, index) => (
@@ -20,7 +20,7 @@ function ProjectSection({ title, description }: ProjectSectionProps) {
                     </Fragment>
                 ))}
             </p>
-        </div>
+        </section>
     );
 }
 

@@ -8,7 +8,7 @@ type ProjectInfoProps = {
 
 function ProjectInfo({ project }: ProjectInfoProps) {
     return (
-        <div className={styles.infoContainer}>
+        <section className={styles.infoContainer}>
             <div className={styles.categories}>
                 <span className={styles.title}>Category</span>
                 {project.categories.map((category, index) => (
@@ -27,7 +27,7 @@ function ProjectInfo({ project }: ProjectInfoProps) {
                 <span className={styles.title}>Date</span>
                 <time dateTime={project.date.toISOString()}>{project.date.toLocaleString('en-US', { month: 'short', year: 'numeric' })}</time>
             </div>
-        </div>
+        </section>
     );
 }
 
