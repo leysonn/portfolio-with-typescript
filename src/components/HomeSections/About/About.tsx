@@ -20,7 +20,7 @@ function About() {
                         "Ability to put themselves in the merchant's shoes. It is meant to partner on the long run, and work as an extension of the merchant's team.",
                     style: styles.description,
                 }}
-                aside={{ element: <img className={styles.aboutImage} src={about_image} alt=" " draggable={false} />, position: 'before' }}
+                aside={{ element: <img className={styles.aboutImage} src={about_image} alt="Title image" draggable={false} />, position: 'before' }}
             >
                 <Link to="/about">
                     <Button width={8.62} color="light" className={styles.button}>

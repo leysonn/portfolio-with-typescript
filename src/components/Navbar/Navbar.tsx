@@ -24,7 +24,7 @@ function Navbar() {
                         mobileMenuVisible ? toggleMobileMenu() : undefined;
                     }}
                 >
-                    <img src={logo} alt="Логотип компании" />
+                    <img src={logo} alt="Company logo" />
                     <h1>Agency</h1>
                 </Link>
 
@@ -32,9 +32,9 @@ function Navbar() {
 
                 <Button className={styles.mobileMenuButton} width={3} color="dark" onClick={toggleMobileMenu}>
                     {mobileMenuVisible ? (
-                        <img src={close_icon} alt="Закрыть мобильное меню" loading="lazy" />
+                        <img src={close_icon} alt="Close mobile menu" loading="lazy" />
                     ) : (
-                        <img src={mobile_menu_icon} alt="Открыть мобильное меню" loading="lazy" />
+                        <img src={mobile_menu_icon} alt="Open mobile menu" loading="lazy" />
                     )}
                 </Button>
             </section>

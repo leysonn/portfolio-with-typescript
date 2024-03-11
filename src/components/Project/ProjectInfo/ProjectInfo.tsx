@@ -20,7 +20,7 @@ function ProjectInfo({ project }: ProjectInfoProps) {
             <div>
                 <span className={styles.title}>Client</span>
                 <Link to={project.client.url}>
-                    <img className={styles.client} src={project.client.logo} alt={project.client.name} draggable={false} />
+                    <img className={styles.client} src={project.client.logo} alt={project.client.name + ' logo'} draggable={false} />
                 </Link>
             </div>
             <div className={styles.date}>

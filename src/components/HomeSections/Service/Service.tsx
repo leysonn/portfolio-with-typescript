@@ -17,12 +17,12 @@ function Service() {
                 title={{ content: 'Making Complex Digital Products', style: styles.title }}
                 subtitle="Agency provides a full service range including technical skills, design, business."
                 aside={{
-                    element: <img className={styles.titleImage} src={title_image} alt=" " draggable={false} />,
+                    element: <img className={styles.titleImage} src={title_image} alt="Title image" draggable={false} />,
                     position: 'before',
                 }}
             >
                 <div className={styles.quoteContainer}>
-                    <img src={avatar} alt="Аватар" />
+                    <img src={avatar} alt="Avatar" />
                     <div>
                         <p>"Understanding, ability to put themselves in the merchant's shoes. It is meant to partner."</p>
                         <span>Jenny Murtaugh</span>

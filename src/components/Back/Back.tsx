@@ -11,7 +11,7 @@ function Back({ to, url }: BackProps) {
     return (
         <div className={styles.backContainer}>
             <Link to={url} className={styles.link}>
-                <img src={back_icon} alt=" " className={styles.back} />
+                <img src={back_icon} alt="Left arrow" className={styles.back} />
                 <label className={styles.to}>Back to {to}</label>
             </Link>
         </div>

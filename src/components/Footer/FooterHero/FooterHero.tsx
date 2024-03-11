@@ -12,7 +12,7 @@ function FooterHero() {
                 titleContainerStyle={styles.titleContainer}
                 title={{content: "Help To Build Your Dream Project", style: styles.title}}
                 description={{content: "A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.", style: styles.description}}
-                aside={{element: <img className={styles.image} src={contactFooterImage} alt=" " draggable={false} />, position: 'before'}}
+                aside={{element: <img className={styles.image} src={contactFooterImage} alt="Title image" draggable={false} />, position: 'before'}}
             >
                 <Link to="/contact">
                     <Button color="light" width={9.62} className={styles.button}>

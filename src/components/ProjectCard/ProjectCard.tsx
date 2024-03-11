@@ -14,7 +14,7 @@ function ProjectCard({ project }: ProjectCardProps) {
             className={styles.projectCard}
         >
             <div className={styles.imageContainer}>
-                <img className={styles.image} src={project.images.main} alt=" " draggable={false} />
+                <img className={styles.image} src={project.images.main} alt="Project image" draggable={false} />
                 <div className={styles.mask} />
             </div>
             <div className={styles.projectText}>

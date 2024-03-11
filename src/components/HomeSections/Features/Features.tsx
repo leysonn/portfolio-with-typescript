@@ -17,14 +17,14 @@ function Features() {
                 title={{ content: 'Give Your Site A New Look', style: styles.title }}
                 subtitle="Service range including technical skills, design, business understanding."
                 aside={{
-                    element: <img className={styles.featuresImage} src={features_image} alt=" " draggable={false} />,
+                    element: <img className={styles.featuresImage} src={features_image} alt="Title image" draggable={false} />,
                     position: 'before',
                 }}
             >
                 <div className={styles.features}>
                     {featuresList.map((feature, index) => (
                         <div className={styles.feature} key={index}>
-                            <img src={check_icon} alt=" " />
+                            <img src={check_icon} alt="Check icon" />
                             <span>{feature}</span>
                         </div>
                     ))}
@@ -39,7 +39,7 @@ function Features() {
                     element: (
                         <div className={styles.cardContainer}>
                             <div className={styles.cardWhite}>
-                                <img src={card_icon} alt=" " />
+                                <img src={card_icon} alt="Card icon" />
                                 <h3 className={styles.cardTitle}>Professional</h3>
                                 <p className={styles.cardDescription}>Full service range including technical skills, design.</p>
                             </div>

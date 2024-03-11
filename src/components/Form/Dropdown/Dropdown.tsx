@@ -24,7 +24,7 @@ function Dropdown({ className, label, options, value, onChange }: DropdownProps)
                         </option>
                     ))}
                 </select>
-                <img className={styles.dropdownIcon} draggable={false} loading="lazy" src={dropdown_icon} alt=" " />
+                <img className={styles.dropdownIcon} draggable={false} loading="lazy" src={dropdown_icon} alt="Down arrow" />
             </label>
         </form>
     );

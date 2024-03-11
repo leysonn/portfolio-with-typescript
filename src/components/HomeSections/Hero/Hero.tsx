@@ -9,10 +9,10 @@ function Hero() {
     return (
         <section id="hero">
             <div className={styles.heroContent}>
-                <img className={styles.titleImage} src={title_image} alt=" " draggable={false} />
+                <img className={styles.titleImage} src={title_image} alt="Decoration" draggable={false} />
                 <div className={styles.titleContainer}>
                     <span className={styles.subtitle}>Modern Studio</span>
-                    <img className={styles.star} src={title_star} alt=" " draggable={false} />
+                    <img className={styles.star} src={title_star} alt="Title image" draggable={false} />
                     <h1 className={styles.title}>
                         We’re Help
                         <br />
@@ -34,7 +34,7 @@ function Hero() {
                         </Link>
                     </div>
                     <div className={styles.quoteContainer}>
-                        <img src={avatar} alt="Аватар" />
+                        <img src={avatar} alt="Avatar" />
                         <div>
                             <p>"Put themselves in the merchant's shoes"</p>
                             <span>Meta Inc.</span>
