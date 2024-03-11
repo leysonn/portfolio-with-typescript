@@ -1,0 +1,14 @@
+@import '../../../styles/fonts';
+
+.related-projects {
+    @apply xl:w-292.5 lg:w-250 md:w-180 sm:w-120 w-mobile mx-auto;
+
+    .title {
+        @apply text-dark mt-18 mb-10;
+        @include h4;
+    }
+
+    .projects {
+        @apply flex md:flex-nowrap flex-wrap md:gap-7.5 gap-8 md:mb-40 mb-28;
+    }
+}
