@@ -32,7 +32,7 @@ function Video({ preview, video_mp4, webm = false, video_webm, className }: Vide
                     <img className={styles.image} src={preview} alt="Видео превью" draggable={false} />
                     <div className={styles.mask} />
                     <button className={styles.playButton} onClick={handlePlayPause}>
-                        <img src={play_icon} alt="Иконка воспроизведения" draggable={false} />
+                        <img className={styles.playIcon} src={play_icon} alt="Иконка воспроизведения" draggable={false} />
                     </button>
                 </div>
                 <span className={styles.duration}>{duration}</span>

@@ -9,7 +9,7 @@ function Partners() {
             <div className={styles.logoContainer}>
                 {partnersList.map((item, index) => (
                     <Link to={item.url} key={index}>
-                        <img src={item.image} alt={item.name + ' logotype'} draggable={false} />
+                        <img className={styles.logo} src={item.image} alt={item.name + ' logotype'} draggable={false} />
                     </Link>
                 ))}
             </div>

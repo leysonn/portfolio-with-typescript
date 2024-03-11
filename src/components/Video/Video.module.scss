@@ -27,6 +27,10 @@
                 &:hover {
                     @apply bg-dark bg-opacity-40;
                 }
+
+                .play-icon {
+                    @apply w-full h-full;
+                }
             }
         }
 

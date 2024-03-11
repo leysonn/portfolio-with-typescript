@@ -1,3 +1,7 @@
 .logoContainer {
     @apply flex items-center xl:justify-center sm:justify-center justify-around xl:gap-36.5 lg:gap-25 gap-6 mx-auto lg:my-18 md:my-14 my-12 flex-wrap xl:w-292.5;
+
+    .logo {
+        @apply w-full h-full;
+    }
 }
