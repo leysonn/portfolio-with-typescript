@@ -24,7 +24,7 @@ function Section({ className, titleContainerStyle, name, title, subtitle, descri
             <div className={styles.title_container + ' ' + titleContainerStyle}>
                 <span className={styles.name}>{name}</span>
                 {title && <h2 className={title.style + ' ' + styles.title}>{title.content}</h2>}
-                {subtitle && <h4 className={styles.subtitle}>{subtitle}</h4>}
+                {subtitle && <h3 className={styles.subtitle}>{subtitle}</h3>}
                 {description && <p className={styles.description + ' ' + description.style}>{description.content}</p>}
                 {children}
             </div>

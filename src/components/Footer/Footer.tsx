@@ -11,9 +11,9 @@ function Footer() {
             <FooterHero />
             <div className={styles.footerContent}>
                 <div className={styles.footerContainer}>
-                    <h4 className={styles.footerTitle}>Agency</h4>
+                    <h2 className={styles.footerTitle}>Agency</h2>
                     <div className={styles.footerCol}>
-                        <h5 className={styles.footerColTitle}>Menu</h5>
+                        <h3 className={styles.footerColTitle}>Menu</h3>
                         <div className={styles.footerColContainer}>
                             {footerLinks.menu.map((link, index) => (
                                 <Link to={link.url} key={index}>
@@ -23,7 +23,7 @@ function Footer() {
                         </div>
                     </div>
                     <div className={styles.footerCol}>
-                        <h5 className={styles.footerColTitle}>Service</h5>
+                        <h3 className={styles.footerColTitle}>Service</h3>
                         <div className={styles.footerColContainer}>
                             {footerLinks.service.map((link, index) => (
                                 <Link to={link.url} key={index}>
