@@ -1,0 +1,25 @@
+@import '../../styles/fonts';
+
+.check-marks {
+    @apply flex flex-col gap-4 mt-6;
+
+    .check-mark {
+        @apply flex items-center gap-4;
+
+        img {
+            @apply w-8 h-8;
+        }
+
+        span {
+            @include text;
+        }
+
+        .dark {
+            @apply text-dark;
+        }
+
+        .dark-gray {
+            @apply text-dark-gray;
+        }
+    }
+}

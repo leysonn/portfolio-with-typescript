@@ -13,23 +13,6 @@
             }
             @include h3;
         }
-
-        .features {
-            @apply flex flex-col gap-4 mt-6;
-
-            .feature {
-                @apply flex items-center gap-4;
-
-                img {
-                    @apply w-8 h-8;
-                }
-
-                span {
-                    @apply text-dark-gray;
-                    @include text;
-                }
-            }
-        }
     }
 
     .features-image {

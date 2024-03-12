@@ -1,13 +1,13 @@
-import styles from './Features.module.scss';
+import styles from './FeaturesSection.module.scss';
 import { Link } from '@tanstack/react-router';
 import { featuresList } from '../../../constants/featuresList';
 import Button from '../../Button/Button';
 import features_image from '../../../assets/images/homePage/features.png';
-import check_icon from '../../../assets/icons/check_mark.svg';
 import card_icon from '../../../assets/icons/card_icon.svg';
 import Section from '../../Section/Section';
+import CheckMarks from '../../CheckMarks/CheckMarks';
 
-function Features() {
+function FeaturesSection() {
     return (
         <section id="features">
             <Section
@@ -21,14 +21,7 @@ function Features() {
                     position: 'before',
                 }}
             >
-                <div className={styles.features}>
-                    {featuresList.map((feature, index) => (
-                        <div className={styles.feature} key={index}>
-                            <img src={check_icon} alt="Check icon" />
-                            <span>{feature}</span>
-                        </div>
-                    ))}
-                </div>
+                <CheckMarks list={featuresList} textColor="dark-gray" />
             </Section>
             <Section
                 className={styles.featuresCards}
@@ -62,4 +55,4 @@ function Features() {
     );
 }
 
-export default Features;
+export default FeaturesSection;
