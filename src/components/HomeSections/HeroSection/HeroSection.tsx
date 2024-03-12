@@ -1,11 +1,11 @@
 import { Link } from '@tanstack/react-router';
-import styles from './Hero.module.scss';
+import styles from './HeroSection.module.scss';
 import Button from '../../Button/Button';
 import title_image from '../../../assets/images/homePage/hero.png';
 import title_star from '../../../assets/images/homePage/title_star.svg';
 import avatar from '../../../assets/images/homePage/avatar.png';
 
-function Hero() {
+function HeroSection() {
     return (
         <section id="hero">
             <div className={styles.heroContent}>
@@ -46,4 +46,4 @@ function Hero() {
     );
 }
 
-export default Hero;
+export default HeroSection;

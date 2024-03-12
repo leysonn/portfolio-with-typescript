@@ -1,13 +1,13 @@
 import { Link } from '@tanstack/react-router';
 import Button from '../../Button/Button';
 import ServiceCard from './ServiceCard/ServiceCard';
-import styles from './Service.module.scss';
+import styles from './ServiceSection.module.scss';
 import { servicesList } from '../../../constants/servicesList';
 import title_image from '../../../assets/images/homePage/service.png';
 import avatar from '../../../assets/images/homePage/avatar2.png';
 import Section from '../../Section/Section';
 
-function Service() {
+function ServiceSection() {
     return (
         <section id="service">
             <Section
@@ -49,4 +49,4 @@ function Service() {
     );
 }
 
-export default Service;
+export default ServiceSection;

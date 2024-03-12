@@ -1,12 +1,12 @@
 import { Link } from '@tanstack/react-router';
 import { statList } from '../../../constants/statList';
-import styles from './About.module.scss';
+import styles from './AboutSection.module.scss';
 import Button from '../../Button/Button';
 import StatItem from './StatItem/StatItem';
 import Section from '../../Section/Section';
 import about_image from '../../../assets/images/homePage/about.png';
 
-function About() {
+function AboutSection() {
     return (
         <section id="about">
             <Section
@@ -37,4 +37,4 @@ function About() {
     );
 }
 
-export default About;
+export default AboutSection;

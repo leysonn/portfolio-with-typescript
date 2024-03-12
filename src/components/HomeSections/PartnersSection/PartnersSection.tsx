@@ -1,9 +1,9 @@
-import styles from './Partners.module.scss';
+import styles from './PartnersSection.module.scss';
 import Hr from '../../Hr/Hr';
 import { partnersList } from '../../../constants/partnersList';
 import { Link } from '@tanstack/react-router';
 
-function Partners() {
+function PartnersSection() {
     return (
         <section id="partners">
             <div className={styles.logoContainer}>
@@ -18,4 +18,4 @@ function Partners() {
     );
 }
 
-export default Partners;
+export default PartnersSection;

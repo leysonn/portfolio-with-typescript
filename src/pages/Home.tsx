@@ -1,21 +1,21 @@
-import Hero from '../components/HomeSections/Hero/Hero';
-import About from '../components/HomeSections/About/About';
-import Partners from '../components/HomeSections/Partners/Partners';
-import HowWeWork from '../components/HomeSections/HowWeWork/HowWeWork';
-import VideoReel from '../components/HomeSections/VideoReel/VideoReel';
-import Features from '../components/HomeSections/Features/Features';
-import Service from '../components/HomeSections/Service/Service';
+import HeroSection from '../components/HomeSections/HeroSection/HeroSection';
+import AboutSection from '../components/HomeSections/AboutSection/AboutSection';
+import PartnersSection from '../components/HomeSections/PartnersSection/PartnersSection';
+import HowWeWorkSection from '../components/HomeSections/HowWeWorkSection/HowWeWorkSection';
+import VideoReelSection from '../components/HomeSections/VideoReelSection/VideoReelSection';
+import FeaturesSection from '../components/HomeSections/FeaturesSection/FeaturesSection';
+import ServiceSection from '../components/HomeSections/ServiceSection/ServiceSection';
 
 function Home() {
     return (
         <main>
-            <Hero />
-            <Partners />
-            <About />
-            <HowWeWork />
-            <VideoReel />
-            <Features />
-            <Service />
+            <HeroSection />
+            <PartnersSection />
+            <AboutSection />
+            <HowWeWorkSection />
+            <VideoReelSection />
+            <FeaturesSection />
+            <ServiceSection />
         </main>
     );
 }

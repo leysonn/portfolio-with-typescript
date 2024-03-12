@@ -5,7 +5,7 @@ import Button from '../../Button/Button';
 import features_image from '../../../assets/images/homePage/features.png';
 import card_icon from '../../../assets/icons/card_icon.svg';
 import Section from '../../Section/Section';
-import CheckMarks from '../../CheckMarks/CheckMarks';
+import Features from '../../Features/Features';
 
 function FeaturesSection() {
     return (
@@ -21,7 +21,7 @@ function FeaturesSection() {
                     position: 'before',
                 }}
             >
-                <CheckMarks list={featuresList} textColor="dark-gray" />
+                <Features list={featuresList} textColor="dark-gray" />
             </Section>
             <Section
                 className={styles.featuresCards}

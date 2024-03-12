@@ -1,12 +1,12 @@
-import styles from './CheckMarks.module.scss';
+import styles from './Features.module.scss';
 import check_icon from '../../assets/icons/check_mark.svg';
 
-type CheckMarksProps = {
+type FeaturesProps = {
     list: string[];
     textColor: 'dark' | 'dark-gray';
 };
 
-function CheckMarks({ list, textColor }: CheckMarksProps) {
+function Features({ list, textColor }: FeaturesProps) {
     return (
         <ul className={styles.checkMarks}>
             {list.map((feature, index) => (
@@ -19,4 +19,4 @@ function CheckMarks({ list, textColor }: CheckMarksProps) {
     );
 }
 
-export default CheckMarks;
+export default Features;

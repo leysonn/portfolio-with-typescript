@@ -1,11 +1,11 @@
 import Video from '../../Video/Video';
-import styles from './VideoReel.module.scss';
+import styles from './VideoReelSection.module.scss';
 import video_mp4 from '../../../assets/videos/test-video.mp4';
 import video_webm from '../../../assets/videos/test-video.webm';
 import preview from '../../../assets/images/homePage/preview.png';
 import Section from '../../Section/Section';
 
-function VideoReel() {
+function VideoReelSection() {
     return (
         <section id="video-reel">
             <Section
@@ -26,4 +26,4 @@ function VideoReel() {
     );
 }
 
-export default VideoReel;
+export default VideoReelSection;
