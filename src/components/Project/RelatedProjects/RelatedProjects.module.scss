@@ -1,7 +1,8 @@
 @import '../../../styles/fonts';
+@import '../../../styles/widths';
 
 .related-projects {
-    @apply xl:w-292.5 lg:w-250 md:w-180 sm:w-120 w-mobile mx-auto;
+    @include width-1170;
 
     .title {
         @apply text-dark mt-18 mb-10;

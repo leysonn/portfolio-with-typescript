@@ -1,5 +1,8 @@
+@import '../../../styles/widths';
+
 .images-container {
-    @apply xl:w-292.5 lg:w-250 md:w-180 sm:w-120 w-mobile mx-auto flex flex-wrap xl:justify-between justify-center items-center xl:gap-0 sm:gap-7.5 gap-4;
+    @include width-1170;
+    @apply flex flex-wrap xl:justify-between justify-center items-center xl:gap-0 sm:gap-7.5 gap-4;
 
     .video {
         @apply lg:h-112 h-[16.19rem];

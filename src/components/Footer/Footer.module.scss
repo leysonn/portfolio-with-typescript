@@ -1,13 +1,9 @@
 @import '../../styles/fonts';
+@import '../../styles/widths';
 
 .footer-content {
-    @apply xl:w-292.5
-        lg:w-250
-        md:w-180
-        sm:w-120
-        w-mobile
-        mx-auto
-        mt-20
+    @include width-1170;
+    @apply mt-20
         md:mb-17
         mb-16
         flex
@@ -44,13 +40,8 @@
 }
 
 .footer-bottom {
-    @apply xl:w-292.5
-    lg:w-250
-    md:w-180
-    sm:w-120
-    w-mobile 
-    mx-auto
-    mt-11
+    @include width-1170;
+    @apply mt-11
     mb-12.5
     flex
     md:flex-nowrap
