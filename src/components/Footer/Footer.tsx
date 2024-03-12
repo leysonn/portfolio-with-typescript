@@ -1,4 +1,4 @@
-import FooterHero from './FooterHero/FooterHero';
+import FooterContact from './FooterContact/FooterContact';
 import styles from './Footer.module.scss';
 import Hr from '../Hr/Hr';
 import SocialLink from '../SocialLink/SocialLink';
@@ -8,7 +8,7 @@ import { footerLinks } from '../../constants/footerLinks';
 function Footer() {
     return (
         <footer className={styles.footer}>
-            <FooterHero />
+            <FooterContact />
             <div className={styles.footerContent}>
                 <div className={styles.footerContainer}>
                     <h2 className={styles.footerTitle}>Agency</h2>
