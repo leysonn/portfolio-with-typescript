@@ -47,10 +47,10 @@
 }
 
 .features-cards {
-    @apply xl:justify-end justify-center sm:gap-3 xl:gap-32.5 2xl:gap-40;
+    @apply xl:justify-end justify-center sm:gap-3 xl:gap-32.5;
 
     .title-container {
-        @apply lg:w-92 w-mobile sm:mt-69.5 mt-32.5;
+        @apply lg:w-92 w-mobile md:mt-69.5 mt-32.5;
 
         .description {
             @apply text-dark mt-7.5 mb-7;

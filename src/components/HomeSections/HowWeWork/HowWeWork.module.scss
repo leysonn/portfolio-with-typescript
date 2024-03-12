@@ -1,7 +1,7 @@
 @import '../../../styles/fonts';
 
 .how-we-work-content {
-    @apply xl:justify-start justify-center sm:gap-3 lg:gap-32.5 md:gap-11 2xl:gap-40;
+    @apply xl:justify-start justify-center sm:gap-3 lg:gap-32.5 md:gap-11;
 
     .title-container {
         @apply lg:mt-35 mt-8.5;
