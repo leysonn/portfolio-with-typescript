@@ -3,8 +3,12 @@
 .service-card {
     @apply lg:border-r lg:border-b-0 border-b border-orange-dark border-solid lg:w-97.7 md:w-120 w-mobile h-100 lg:px-12 md:px-18 px-7 py-12 flex flex-col justify-start;
 
-    .icon {
-        @apply w-20 h-20;
+    .icon-container {
+        @apply w-20 h-20 bg-light-accent rounded-full;
+
+        .icon {
+            @apply w-full h-full p-6;
+        }
     }
 
     .title {
