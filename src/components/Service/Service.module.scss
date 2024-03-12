@@ -1,0 +1,74 @@
+@import '../../styles/fonts';
+@import '../../styles/widths';
+
+.service {
+    .service-content {
+        @include width-1170;
+        @apply flex items-center justify-between h-44 cursor-pointer;
+
+        .icon-container {
+            @apply bg-light-accent w-8 h-8 rounded-full select-none transition-transform duration-200 shrink-0;
+
+            .icon {
+                @apply w-full h-full p-2.5;
+            }
+        }
+
+        .icon-expanded {
+            @apply rotate-180;
+        }
+
+        .name-container {
+            @apply flex items-center lg:gap-9 gap-8.5;
+
+            .icon-container {
+                @apply w-20 h-20;
+
+                .icon {
+                    @apply p-6;
+                }
+            }
+
+            .name {
+                @apply text-dark select-none break-words sm:w-auto w-44;
+                @media (min-width: 1024px) {
+                    @include h2;
+                }
+                @include h3;
+            }
+        }
+    }
+    .service-expanded {
+        @apply h-158.5 overflow-hidden transition-all duration-500;
+
+        &-container {
+            @include width-1170;
+            @apply flex mt-19 mb-25;
+
+            .service-expanded-content {
+                @apply w-142.5 flex flex-col;
+
+                .title {
+                    @apply text-dark select-none;
+                    @media (min-width: 1024px) {
+                        @include h3;
+                    }
+                    @include h4;
+                }
+
+                .description {
+                    @apply text-dark-gray mt-7 mb-9;
+                    @include text;
+                }
+            }
+        }
+
+        .position-right {
+            @apply justify-end;
+        }
+    }
+
+    .collapsed {
+        @apply h-0;
+    }
+}
