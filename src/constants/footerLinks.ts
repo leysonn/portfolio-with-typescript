@@ -10,6 +10,7 @@ export type FooterLink = {
     service: {
         title: string;
         url: string;
+        resetScroll?: boolean;
     }[];
     social: {
         icon: string;
@@ -52,6 +53,7 @@ export const footerLinks: FooterLink = {
         {
             title: 'See More',
             url: '/services',
+            resetScroll: true,
         },
     ],
     social: [
