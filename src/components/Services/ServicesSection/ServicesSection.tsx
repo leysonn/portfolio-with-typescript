@@ -3,7 +3,7 @@ import Section from '../../Section/Section';
 
 function ServicesSection() {
     return (
-        <div>
+        <section>
             <Section
                 className={styles.servicesContent}
                 titleContainerStyle={styles.titleContainer}
@@ -22,7 +22,7 @@ function ServicesSection() {
                     position: 'after',
                 }}
             />
-        </div>
+        </section>
     );
 }
 

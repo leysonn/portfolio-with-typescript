@@ -14,7 +14,7 @@ function Service({ service, positionRight }: ServiceProps) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <div className={styles.service}>
+        <section className={styles.service} id={service.name}>
             <div className={styles.serviceContent} onClick={() => setIsExpanded(!isExpanded)}>
                 <div className={styles.nameContainer}>
                     <div className={styles.iconContainer}>
@@ -37,7 +37,7 @@ function Service({ service, positionRight }: ServiceProps) {
                 </div>
             </div>
             <Hr />
-        </div>
+        </section>
     );
 }
 
