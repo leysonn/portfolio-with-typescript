@@ -3,6 +3,7 @@ import Hr from '../components/Hr/Hr';
 import ServicesSection from '../components/Services/ServicesSection/ServicesSection';
 import Title from '../components/Title/Title';
 import Service from '../components/Service/Service';
+import HowWeWorkSection from '../components/Services/HowWeWorkSection/HowWeWorkSection';
 
 function Services() {
     return (
@@ -10,11 +11,10 @@ function Services() {
             <Title>Services</Title>
             <ServicesSection />
             <Hr />
-            {/* map => <Service /> */}
             {serviceList.map((service, index) => (
                 <Service key={index} service={service} positionRight={index % 2 !== 1} />
             ))}
-            {/* <HowWeWorkSection /> */}
+            <HowWeWorkSection />
         </main>
     );
 }
