@@ -1,4 +1,4 @@
-import { ReasonsItem } from '../../../../constants/reasonsList';
+import { ReasonsItem } from '../../constants/reasonsList';
 import styles from './ReasonItem.module.scss';
 
 function ReasonItem({ number, title }: ReasonsItem) {
