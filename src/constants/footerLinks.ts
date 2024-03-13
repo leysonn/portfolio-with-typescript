@@ -39,19 +39,19 @@ export const footerLinks: FooterLink = {
     service: [
         {
             title: 'Design',
-            url: '#!',
+            url: '/services#Design',
         },
         {
             title: 'Development',
-            url: '#!',
+            url: '/services#Development',
         },
         {
             title: 'Marketing',
-            url: '#!',
+            url: '/services#Marketing',
         },
         {
             title: 'See More',
-            url: '#!',
+            url: '/services',
         },
     ],
     social: [

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { LegacyRef, useState } from 'react';
 import { ServiceItem } from '../../constants/serviceList';
 import Features from '../Features/Features';
 import Hr from '../Hr/Hr';
@@ -8,13 +8,15 @@ import arrow_icon from '../../assets/icons/down_arrow_icon.svg';
 type ServiceProps = {
     service: ServiceItem;
     positionRight: boolean;
+    forwardRef: LegacyRef<HTMLDivElement> | null;
+    open: boolean;
 };
 
-function Service({ service, positionRight }: ServiceProps) {
-    const [isExpanded, setIsExpanded] = useState(false);
+function Service({ service, positionRight, forwardRef, open }: ServiceProps) {
+    const [isExpanded, setIsExpanded] = useState(open);
 
     return (
-        <section className={styles.service} id={service.name}>
+        <section className={styles.service} ref={forwardRef}>
             <div className={styles.serviceContent} onClick={() => setIsExpanded(!isExpanded)}>
                 <div className={styles.nameContainer}>
                     <div className={styles.iconContainer}>

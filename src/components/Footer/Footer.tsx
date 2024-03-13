@@ -26,7 +26,7 @@ function Footer() {
                         <h3 className={styles.footerColTitle}>Service</h3>
                         <div className={styles.footerColContainer}>
                             {footerLinks.service.map((link, index) => (
-                                <Link to={link.url} key={index}>
+                                <Link to={link.url} key={index} resetScroll={false}>
                                     {link.title}
                                 </Link>
                             ))}
