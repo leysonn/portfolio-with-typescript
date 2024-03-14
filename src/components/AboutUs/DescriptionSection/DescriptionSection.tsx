@@ -1,0 +1,29 @@
+import styles from './DescriptionSection.module.scss';
+import Section from '../../Section/Section';
+
+function DescriptionSection() {
+    return (
+        <section>
+            <Section
+                className={styles.aboutContent}
+                titleContainerStyle={styles.titleContainer}
+                name="About"
+                title={{ content: 'An Experience Design Agency', style: styles.title }}
+                aside={{
+                    element: (
+                        <p className={styles.description}>
+                            Ability to put themselves in the merchant's shoes. It is meant to partner on the long run, and work as an extension of the
+                            merchant's team.
+                            <br />
+                            <br />A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.
+                            They can provide your business with a variety of digital solutions to promote your product or service online and help you.
+                        </p>
+                    ),
+                    position: 'after',
+                }}
+            />
+        </section>
+    );
+}
+
+export default DescriptionSection;
