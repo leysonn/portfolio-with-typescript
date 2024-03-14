@@ -5,7 +5,7 @@ import Back from '../components/Back/Back';
 import ProjectTitle from '../components/Project/ProjectTitle/ProjectTitle';
 import ProjectInfo from '../components/Project/ProjectInfo/ProjectInfo';
 import ProjectSection from '../components/Project/ProjectSection/ProjectSection';
-import ProjectImages from '../components/Project/ProjectImages/ProjectImages';
+import Gallery from '../components/Gallery/Gallery';
 import ProjectShare from '../components/Project/ProjectShare/ProjectShare';
 import Hr from '../components/Hr/Hr';
 import RelatedProjects from '../components/Project/RelatedProjects/RelatedProjects';
@@ -28,7 +28,7 @@ function Project() {
             <ProjectInfo project={project} />
             <img className="xl:w-292.5 lg:w-250 md:w-180 sm:w-120 w-mobile mx-auto mt-17" src={project.images.main} alt="Project image" />
             <ProjectSection title="Problem" description={project.problem} />
-            <ProjectImages project={project} />
+            <Gallery video={project.video} images={project.images.other} />
             <ProjectSection title="Solution" description={project.solution} />
             <ProjectShare />
             <Hr />
