@@ -2,7 +2,7 @@ import { useRouter } from '@tanstack/react-router';
 import { useEffect, useRef } from 'react';
 import { serviceList } from '../constants/serviceList';
 import Hr from '../components/Hr/Hr';
-import ServicesSection from '../components/Services/ServicesSection/ServicesSection';
+import DescriptionSection from '../components/Services/DescriptionSection/DescriptionSection';
 import Title from '../components/Title/Title';
 import Service from '../components/Service/Service';
 import HowWeWorkSection from '../components/Services/HowWeWorkSection/HowWeWorkSection';
@@ -21,7 +21,7 @@ function Services() {
     return (
         <main>
             <Title>Services</Title>
-            <ServicesSection />
+            <DescriptionSection />
             <Hr />
             {serviceList.map((service, index) => {
                 const isCurrent = hash === serviceList[index].name;

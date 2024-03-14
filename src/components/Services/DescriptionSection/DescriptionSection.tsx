@@ -1,7 +1,7 @@
-import styles from './ServicesSection.module.scss';
+import styles from './DescriptionSection.module.scss';
 import Section from '../../Section/Section';
 
-function ServicesSection() {
+function DescriptionSection() {
     return (
         <section>
             <Section
@@ -26,4 +26,4 @@ function ServicesSection() {
     );
 }
 
-export default ServicesSection;
+export default DescriptionSection;
