@@ -77,6 +77,7 @@ export default {
         "288.5": "72.125rem",
         "292.5": "73.125rem",
         "d-screen": "1440px",
+        "full+104": "calc(100% + 416px)",
       },
     },
   },

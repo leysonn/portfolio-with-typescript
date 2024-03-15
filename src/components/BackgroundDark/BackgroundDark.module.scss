@@ -1,0 +1,7 @@
+.container {
+    @apply relative;
+
+    .background {
+        @apply w-screen bg-primary absolute h-full+104 -z-10;
+    }
+}
