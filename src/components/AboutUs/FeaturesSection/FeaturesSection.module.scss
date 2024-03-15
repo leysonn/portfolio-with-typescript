@@ -1,0 +1,63 @@
+@import '../../../styles/fonts';
+
+.features-cards {
+    @apply lg:mt-32 sm:mt-25 mt-22 xl:justify-end justify-center sm:gap-3 xl:gap-32.5;
+
+    .title-container {
+        @apply lg:w-92 w-mobile md:mt-19;
+
+        .title {
+            @apply mt-7.5;
+            @include text_big;
+        }
+
+        .description {
+            @apply mt-3;
+        }
+    }
+
+    .card-container {
+        @apply flex items-end lg:flex-row flex-col md:mt-0 mt-9;
+
+        .card {
+            @apply flex
+            flex-col
+            justify-end
+            lg:w-84
+            w-mobile
+            h-68
+            p-12
+            lg:rounded-r-md
+            lg:rounded-bl-none
+            rounded-b-md border
+            border-solid
+            border-orange-dark
+            lg:border-l-0
+            lg:border-t
+            border-t-0;
+
+            img {
+                @apply w-20 h-20;
+            }
+
+            .card-title {
+                @apply text-dark mt-10 mb-4.5;
+                @include h4;
+            }
+
+            .card-description {
+                @apply text-dark-gray;
+                @include text;
+            }
+        }
+
+        .card-white {
+            @extend .card;
+            @apply bg-light lg:w-84 w-mobile h-84 lg:rounded-l-md lg:rounded-tr-md lg:rounded-br-none rounded-b-none rounded-t-md border-t border-l;
+        }
+    }
+}
+
+.stat-cards {
+    @apply md:mt-36 md:mb-32 mt-20 mb-24.5;
+}
