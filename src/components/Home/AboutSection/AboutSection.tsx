@@ -2,7 +2,7 @@ import { Link } from '@tanstack/react-router';
 import { statList } from '../../../constants/statList';
 import styles from './AboutSection.module.scss';
 import Button from '../../Button/Button';
-import StatItem from './StatItem/StatItem';
+import StatCards from '../../StatCards/StatCards';
 import Section from '../../Section/Section';
 import about_image from '../../../assets/images/homePage/about.png';
 
@@ -28,11 +28,7 @@ function AboutSection() {
                     </Button>
                 </Link>
             </Section>
-            <div className={styles.statContainer}>
-                {statList.map((item, index) => (
-                    <StatItem key={index} value={item.value} description={item.description} />
-                ))}
-            </div>
+            <StatCards className={styles.statCards} stats={statList} />
         </section>
     );
 }

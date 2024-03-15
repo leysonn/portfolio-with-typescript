@@ -1,4 +1,4 @@
-@import '../../../../styles/fonts';
+@import '../../styles/fonts';
 
 .stat {
     @apply md:border-r md:border-b-0 border-b border-orange-dark border-solid w-97.7 h-44 px-12 flex flex-col justify-center gap-3;
@@ -11,5 +11,14 @@
     .description {
         @apply text-dark;
         @include text_big;
+    }
+}
+
+.stat-container {
+    @apply flex md:flex-row justify-center border border-solid border-orange-dark rounded-md mx-auto
+        xl:w-288.5 lg:w-250 md:w-180 sm:w-96 w-mobile flex-col;
+
+    & > :last-child {
+        @apply border-none;
     }
 }
