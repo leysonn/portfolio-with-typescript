@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useRouter } from '@tanstack/react-router';
 import { serviceList } from '../../../constants/serviceList';
-import Service from '../../Service/Service';
+import Service from '../Service/Service';
 
 function ServiceList() {
     const { state } = useRouter();
