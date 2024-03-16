@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useVideoDuration } from '../../hooks/useVideoDuration';
 import styles from './Video.module.scss';
 import play_icon from '../../assets/icons/play_icon.svg';
@@ -15,9 +15,9 @@ function Video({ preview, video_mp4, webm = false, video_webm, className }: Vide
     const [isPlaying, setIsPlaying] = useState(false);
     const [duration, setMetadata] = useVideoDuration();
 
-    function handlePlayPause(): void {
-        setIsPlaying(!isPlaying);
-    }
+    const handlePlayPause = useCallback((): void => {
+        setIsPlaying(isPlaying => !isPlaying);
+    }, []);
 
     return (
         <div className={styles.videoWrapper + ' ' + className}>

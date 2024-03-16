@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { projectsList } from '../../constants/projectsList';
 import { sortProjects } from './sortProjects';
 import TypeSelector from './TypeSelector/TypeSelector';
@@ -14,15 +14,19 @@ function Projects() {
     const [selectedType, setSelectedType] = useState(allTypes);
     const [projectsCount, setProjectsCount] = useState(9);
 
-    function handleSelectorClick(event: React.MouseEvent<HTMLButtonElement>): void {
+    const handleSelectorClick = useCallback((event: React.MouseEvent<HTMLButtonElement>): void => {
         setSelectedType(event.currentTarget.innerText);
         setProjectsCount(9);
-    }
+    }, []);
 
-    function handleDropdownChange(event: React.ChangeEvent<HTMLSelectElement>): void {
+    const handleDropdownChange = useCallback((event: React.ChangeEvent<HTMLSelectElement>): void => {
         setSelectedType(event.currentTarget.value);
         setProjectsCount(9);
-    }
+    }, []);
+
+    const handleLoadMoreClick = useCallback((): void => {
+        setProjectsCount(projectsCount => projectsCount + 9);
+    }, []);
 
     return (
         <section id="projects">
@@ -61,7 +65,7 @@ function Projects() {
                     className={styles.button + (projectsCount >= sortedProjects[selectedType].length ? ' ' + styles.hidden : '')}
                     width={10.62}
                     color="light"
-                    onClick={() => setProjectsCount(projectsCount + 9)}
+                    onClick={handleLoadMoreClick}
                 >
                     Load More
                 </Button>

@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import styles from './Navbar.module.scss';
 import logo from '../../assets/images/logo.svg';
 import Button from '../Button/Button';
@@ -10,20 +10,14 @@ import close_icon from '../../assets/icons/close_icon.svg';
 function Navbar() {
     const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
 
-    function toggleMobileMenu() {
-        setMobileMenuVisible(!mobileMenuVisible);
-    }
+    const toggleMobileMenu = useCallback((): void => {
+        setMobileMenuVisible(mobileMenuVisible => !mobileMenuVisible);
+    }, []);
 
     return (
         <header className={styles.header}>
             <section className={styles.content}>
-                <Link
-                    to="/"
-                    className={styles.logo}
-                    onClick={() => {
-                        mobileMenuVisible ? toggleMobileMenu() : undefined;
-                    }}
-                >
+                <Link to="/" className={styles.logo} onClick={mobileMenuVisible ? toggleMobileMenu : undefined}>
                     <img src={logo} alt="Company logo" />
                     <h1>Agency</h1>
                 </Link>

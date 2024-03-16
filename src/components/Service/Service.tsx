@@ -1,4 +1,4 @@
-import { LegacyRef, useState } from 'react';
+import { LegacyRef, useCallback, useState } from 'react';
 import { ServiceItem } from '../../constants/serviceList';
 import Features from '../Features/Features';
 import Hr from '../Hr/Hr';
@@ -15,9 +15,13 @@ type ServiceProps = {
 function Service({ service, positionRight, forwardRef, open }: ServiceProps) {
     const [isExpanded, setIsExpanded] = useState(open);
 
+    const toggleIsExpanded = useCallback((): void => {
+        setIsExpanded(isExpanded => !isExpanded);
+    }, []);
+
     return (
         <section className={styles.service} ref={forwardRef}>
-            <div className={styles.serviceContent} onClick={() => setIsExpanded(!isExpanded)}>
+            <div className={styles.serviceContent} onClick={toggleIsExpanded}>
                 <div className={styles.nameContainer}>
                     <div className={styles.iconContainer}>
                         <img className={styles.icon} src={service.icon} alt="Service icon" draggable={false} />
