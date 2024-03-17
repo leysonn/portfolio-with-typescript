@@ -1,7 +1,7 @@
 import styles from './HowWeWorkSection.module.scss';
 import Button from '../../Button/Button';
 import ReasonItem from '../../ReasonItem/ReasonItem';
-import { reasonsList } from '../../../constants/reasonsList';
+import { reasonsList } from './reasonsList';
 import Hr from '../../Hr/Hr';
 import { Link } from '@tanstack/react-router';
 import Section from '../../Section/Section';

@@ -1,8 +1,8 @@
-import design_icon from '../assets/icons/design_icon.svg';
-import development_icon from '../assets/icons/development_icon.svg';
-import marketing_icon from '../assets/icons/marketing_icon.svg';
+import design_icon from '../../../assets/icons/design_icon.svg';
+import development_icon from '../../../assets/icons/development_icon.svg';
+import marketing_icon from '../../../assets/icons/marketing_icon.svg';
 
-export type ServiceItem = {
+export type ServicesItem = {
     name: string;
     icon: string;
     title: string;
@@ -10,7 +10,7 @@ export type ServiceItem = {
     features: string[];
 };
 
-export const serviceList: ServiceItem[] = [
+export const servicesList: ServicesItem[] = [
     {
         name: 'Design',
         icon: design_icon,

@@ -1,12 +1,12 @@
 import { LegacyRef, useCallback, useState } from 'react';
-import { ServiceItem } from '../../../constants/serviceList';
+import { ServicesItem } from '../ServiceList/servicesList';
 import Features from '../../Features/Features';
 import Hr from '../../Hr/Hr';
 import styles from './Service.module.scss';
 import arrow_icon from '../../../assets/icons/down_arrow_icon.svg';
 
 type ServiceProps = {
-    service: ServiceItem;
+    service: ServicesItem;
     positionRight: boolean;
     forwardRef: LegacyRef<HTMLDivElement> | null;
     open: boolean;

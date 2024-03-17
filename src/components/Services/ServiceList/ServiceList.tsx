@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useRouter } from '@tanstack/react-router';
-import { serviceList } from '../../../constants/serviceList';
+import { servicesList } from './servicesList';
 import Service from '../Service/Service';
 
 function ServiceList() {
@@ -16,8 +16,8 @@ function ServiceList() {
 
     return (
         <>
-            {serviceList.map((service, index) => {
-                const isCurrent = hash === serviceList[index].name;
+            {servicesList.map((service, index) => {
+                const isCurrent = hash === servicesList[index].name;
                 return <Service key={index} service={service} positionRight={index % 2 !== 1} forwardRef={isCurrent ? ref : null} open={isCurrent} />;
             })}
         </>

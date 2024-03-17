@@ -1,9 +1,11 @@
 import styles from './StatCards.module.scss';
-import { StatListItem } from '../../constants/statList';
 
 type StatCardsProps = {
     className: string;
-    stats: StatListItem[];
+    stats: Array<{
+        value: string;
+        description: string;
+    }>;
 };
 
 function StatCards({ className, stats }: StatCardsProps) {

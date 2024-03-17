@@ -3,7 +3,7 @@ import styles from './Footer.module.scss';
 import Hr from '../Hr/Hr';
 import SocialLink from '../SocialLink/SocialLink';
 import { Link } from '@tanstack/react-router';
-import { footerLinks } from '../../constants/footerLinks';
+import { footerLinks } from './footerLinks';
 
 function Footer() {
     return (

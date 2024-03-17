@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { statList } from '../../../constants/statList';
+import { statList } from './statList';
 import styles from './AboutSection.module.scss';
 import Button from '../../Button/Button';
 import StatCards from '../../StatCards/StatCards';

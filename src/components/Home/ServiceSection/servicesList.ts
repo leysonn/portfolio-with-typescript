@@ -1,6 +1,6 @@
-import design_icon from '../assets/icons/design_icon.svg';
-import development_icon from '../assets/icons/development_icon.svg';
-import marketing_icon from '../assets/icons/marketing_icon.svg';
+import design_icon from '../../../assets/icons/design_icon.svg';
+import development_icon from '../../../assets/icons/development_icon.svg';
+import marketing_icon from '../../../assets/icons/marketing_icon.svg';
 
 export type ServicesListItem = {
     icon: string;

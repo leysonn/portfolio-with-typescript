@@ -1,6 +1,6 @@
 import styles from './PartnersSection.module.scss';
 import Hr from '../../Hr/Hr';
-import { partnersList } from '../../../constants/partnersList';
+import { partnersList } from './partnersList';
 import { Link } from '@tanstack/react-router';
 
 function PartnersSection() {

@@ -1,6 +1,6 @@
-import facebook_icon from '../assets/icons/facebook.svg';
-import twitter_icon from '../assets/icons/twitter.svg';
-import pinterest_icon from '../assets/icons/pinterest.svg';
+import facebook_icon from '../../../assets/icons/facebook.svg';
+import twitter_icon from '../../../assets/icons/twitter.svg';
+import pinterest_icon from '../../../assets/icons/pinterest.svg';
 
 export type ShareItem = {
     name: string;

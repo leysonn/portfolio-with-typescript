@@ -1,6 +1,6 @@
-import facebook_icon from '../assets/icons/facebook.svg';
-import twitter_icon from '../assets/icons/twitter.svg';
-import instagram_icon from '../assets/icons/instagram.svg';
+import facebook_icon from '../../assets/icons/facebook.svg';
+import twitter_icon from '../../assets/icons/twitter.svg';
+import instagram_icon from '../../assets/icons/instagram.svg';
 
 export type FooterLink = {
     menu: {

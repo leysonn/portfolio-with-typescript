@@ -6,7 +6,7 @@ import image2 from '../assets/images/aboutUs/image2.png';
 import image3 from '../assets/images/aboutUs/image3.png';
 import image4 from '../assets/images/aboutUs/image4.png';
 
-export type AboutGallery = {
+export type AboutMedia = {
     video: {
         preview: string;
         webm: string;
@@ -15,7 +15,7 @@ export type AboutGallery = {
     images: string[];
 };
 
-export const aboutGallery: AboutGallery = {
+export const aboutMedia: AboutMedia = {
     video: {
         preview: preview,
         webm: video_webm,

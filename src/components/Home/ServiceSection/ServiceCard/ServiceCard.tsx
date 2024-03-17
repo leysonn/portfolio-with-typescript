@@ -1,5 +1,5 @@
 import styles from './ServiceCard.module.scss';
-import { ServicesListItem } from '../../../../constants/servicesList';
+import { ServicesListItem } from '../servicesList';
 import Button from '../../../Button/Button';
 import { Link } from '@tanstack/react-router';
 

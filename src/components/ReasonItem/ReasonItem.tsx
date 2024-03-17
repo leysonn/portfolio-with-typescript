@@ -1,7 +1,11 @@
-import { ReasonsItem } from '../../constants/reasonsList';
 import styles from './ReasonItem.module.scss';
 
-function ReasonItem({ number, title }: ReasonsItem) {
+type ReasonsItemProps = {
+    number: number;
+    title: string;
+};
+
+function ReasonItem({ number, title }: ReasonsItemProps) {
     return (
         <div className={styles.reason}>
             <h3 className={styles.number}>{number}</h3>

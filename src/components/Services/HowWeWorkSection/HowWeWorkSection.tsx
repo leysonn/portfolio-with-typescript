@@ -1,6 +1,6 @@
 import styles from './HowWeWorkSection.module.scss';
 import ReasonItem from '../../ReasonItem/ReasonItem';
-import { reasonsList } from '../../../constants/reasonsList';
+import { reasonsList } from './reasonsList';
 import Hr from '../../Hr/Hr';
 import Section from '../../Section/Section';
 

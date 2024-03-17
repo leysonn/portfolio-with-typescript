@@ -1,4 +1,4 @@
-import { shareList } from '../../../constants/shareList';
+import { shareList } from './shareList';
 import SocialLink from '../../SocialLink/SocialLink';
 import styles from './ProjectShare.module.scss';
 

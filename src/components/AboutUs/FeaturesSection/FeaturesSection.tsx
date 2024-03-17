@@ -1,5 +1,5 @@
 import styles from './FeaturesSection.module.scss';
-import { statList } from '../../../constants/statList';
+import { statList } from './statList';
 import card_icon from '../../../assets/icons/card_icon.svg';
 import Section from '../../Section/Section';
 import StatCards from '../../StatCards/StatCards';

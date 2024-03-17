@@ -1,6 +1,6 @@
 import styles from './FeaturesSection.module.scss';
 import { Link } from '@tanstack/react-router';
-import { featuresList } from '../../../constants/featuresList';
+import { featuresList } from './featuresList';
 import Button from '../../Button/Button';
 import features_image from '../../../assets/images/homePage/features.png';
 import card_icon from '../../../assets/icons/card_icon.svg';
