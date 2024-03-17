@@ -1,0 +1,25 @@
+@import '../../../../styles/fonts';
+
+.employee-card {
+    @apply flex flex-col w-67.5 h-91 flex-shrink-0 select-none;
+
+    .image-container {
+        @apply w-full h-68 border border-solid border-primary-gray rounded-md;
+
+        .image {
+            @apply w-full h-full object-scale-down object-bottom;
+        }
+    }
+
+    .info-container {
+        .name {
+            @apply text-light mt-6;
+            @include h4;
+        }
+
+        .role {
+            @apply text-light-gray mt-1;
+            @include text;
+        }
+    }
+}
