@@ -1,10 +1,10 @@
-import video_mp4 from '../assets/videos/test-video.mp4';
-import video_webm from '../assets/videos/test-video.webm';
-import preview from '../assets/images/homePage/preview.png';
-import image1 from '../assets/images/aboutUs/image1.png';
-import image2 from '../assets/images/aboutUs/image2.png';
-import image3 from '../assets/images/aboutUs/image3.png';
-import image4 from '../assets/images/aboutUs/image4.png';
+import video_mp4 from '../../../assets/videos/test-video.mp4';
+import video_webm from '../../../assets/videos/test-video.webm';
+import preview from '../../../assets/images/homePage/preview.png';
+import image1 from '../../../assets/images/aboutUs/image1.png';
+import image2 from '../../../assets/images/aboutUs/image2.png';
+import image3 from '../../../assets/images/aboutUs/image3.png';
+import image4 from '../../../assets/images/aboutUs/image4.png';
 
 export type AboutMedia = {
     video: {
