@@ -16,7 +16,7 @@
 
 .stat-container {
     @apply flex md:flex-row justify-center border border-solid border-orange-dark rounded-md mx-auto
-        xl:w-288.5 lg:w-250 md:w-180 sm:w-96 w-mobile flex-col;
+        xl:w-288.5 lg:w-250 md:w-180 sm:w-96 w-mobile flex-col overflow-hidden;
 
     & > :last-child {
         @apply border-none;
