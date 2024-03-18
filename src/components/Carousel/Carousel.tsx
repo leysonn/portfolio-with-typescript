@@ -9,6 +9,7 @@ type List = Array<{ [key: string]: string }>;
 type CarouselProps = {
     list: List;
     buttons?: boolean;
+    width?: 'screen' | 'default';
     titleContainer: {
         name: string;
         title: string;
@@ -16,15 +17,16 @@ type CarouselProps = {
     };
     carousel: {
         content: (item: List[number], index: number) => JSX.Element;
-        itemWidth: number;
+        itemWidth: string;
         className: string;
         containerClassName: string;
+        wrapperClassName?: string;
     };
     activeIndex: number;
     setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
 };
 
-function Carousel({ list, buttons = false, titleContainer, carousel, activeIndex, setActiveIndex }: CarouselProps) {
+function Carousel({ list, buttons = false, width = 'default', titleContainer, carousel, activeIndex, setActiveIndex }: CarouselProps) {
     // swipe handlers
     function handleSwipe(direction: 'left' | 'right'): void {
         if (direction === 'left') {
@@ -51,7 +53,7 @@ function Carousel({ list, buttons = false, titleContainer, carousel, activeIndex
     }, [setActiveIndex, list]);
 
     return (
-        <section className={styles.teamCarousel}>
+        <section className={styles.teamCarousel + (width === 'screen' ? ' ' + styles.screen : '')}>
             <div className={styles.container}>
                 <div className={styles.titleContainer + (titleContainer.className ? ' ' + titleContainer.className : '')}>
                     <span className={styles.name}>{titleContainer.name}</span>
@@ -68,12 +70,14 @@ function Carousel({ list, buttons = false, titleContainer, carousel, activeIndex
                     </div>
                 )}
             </div>
-            <div className={`${styles.carousel} ${carousel.className}`} {...swipeHandlers}>
-                <div
-                    className={`${styles.carouselContainer} ${carousel.containerClassName}`}
-                    style={{ transform: `translateX(-${activeIndex * carousel.itemWidth}rem)` }}
-                >
-                    {list.map(carousel.content)}
+            <div className={carousel.wrapperClassName ? carousel.wrapperClassName : undefined}>
+                <div className={`${styles.carousel} ${carousel.className}`} {...swipeHandlers}>
+                    <div
+                        className={`${styles.carouselContainer} ${carousel.containerClassName}`}
+                        style={{ transform: `translateX(calc(-${activeIndex} * ${carousel.itemWidth}))` }}
+                    >
+                        {list.map(carousel.content)}
+                    </div>
                 </div>
             </div>
             <div className={styles.dotsContainer}>

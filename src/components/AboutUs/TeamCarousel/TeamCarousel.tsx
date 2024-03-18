@@ -14,7 +14,7 @@ function TeamCarousel() {
             titleContainer={{ name: 'Our Team', title: 'Team of Designers and Developers', className: styles.titleContainer }}
             carousel={{
                 content: (item, index) => <EmployeeCard key={index} name={item.name} role={item.role} image={item.image} />,
-                itemWidth: 18.75,
+                itemWidth: "18.75rem",
                 className: styles.carousel,
                 containerClassName: styles.carouselContainer,
             }}
