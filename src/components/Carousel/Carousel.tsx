@@ -53,7 +53,7 @@ function Carousel({ list, buttons = false, width = 'default', titleContainer, ca
     }, [setActiveIndex, list]);
 
     return (
-        <section className={styles.teamCarousel + (width === 'screen' ? ' ' + styles.screen : '')}>
+        <section className={styles.carouselSection + (width === 'screen' ? ' ' + styles.screen : '')}>
             <div className={styles.container}>
                 <div className={styles.titleContainer + (titleContainer.className ? ' ' + titleContainer.className : '')}>
                     <span className={styles.name}>{titleContainer.name}</span>
