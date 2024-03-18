@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import { teamList } from './teamList';
 import styles from './TeamCarousel.module.scss';
 import EmployeeCard from './EmployeeCard/EmployeeCard';
 import Carousel from '../../Carousel/Carousel';
 
 function TeamCarousel() {
+    const [activeIndex, setActiveIndex] = useState(0);
+
     return (
         <Carousel
             list={teamList}
@@ -15,6 +18,8 @@ function TeamCarousel() {
                 className: styles.carousel,
                 containerClassName: styles.carouselContainer,
             }}
+            activeIndex={activeIndex}
+            setActiveIndex={setActiveIndex}
         />
     );
 }

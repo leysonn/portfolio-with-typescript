@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import styles from './Carousel.module.scss';
 import left_arrow from '../../assets/icons/left_arrow_icon.svg';
@@ -20,11 +20,11 @@ type CarouselProps = {
         className: string;
         containerClassName: string;
     };
+    activeIndex: number;
+    setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
 };
 
-function Carousel({ list, buttons = false, titleContainer, carousel }: CarouselProps) {
-    const [activeIndex, setActiveIndex] = useState(0);
-
+function Carousel({ list, buttons = false, titleContainer, carousel, activeIndex, setActiveIndex }: CarouselProps) {
     // swipe handlers
     function handleSwipe(direction: 'left' | 'right'): void {
         if (direction === 'left') {
@@ -44,11 +44,11 @@ function Carousel({ list, buttons = false, titleContainer, carousel }: CarouselP
     // button handlers
     const handleButtonLeft = useCallback((): void => {
         setActiveIndex(prevIndex => (prevIndex === 0 ? prevIndex : prevIndex - 1));
-    }, []);
+    }, [setActiveIndex]);
 
     const handleButtonRight = useCallback((): void => {
         setActiveIndex(prevIndex => (prevIndex === list.length - 1 ? prevIndex : prevIndex + 1));
-    }, [list]);
+    }, [setActiveIndex, list]);
 
     return (
         <section className={styles.teamCarousel}>
