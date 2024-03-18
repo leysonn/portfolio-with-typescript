@@ -1,0 +1,22 @@
+@import '../../../styles/widths';
+@import '../../../styles/fonts';
+
+.title-container {
+    @apply w-screen flex flex-col items-center;
+
+    h2 {
+        @apply w-100 text-center;
+    }
+}
+
+.carousel-wrapper {
+    @apply w-screen overflow-hidden ml-auto;
+
+    .carousel {
+        @apply md:w-192.5 w-94 md:h-100 h-156 mx-auto;
+    
+        .carousel-container {
+            @apply transition-transform duration-500;
+        }
+    }
+}

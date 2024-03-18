@@ -1,0 +1,92 @@
+@import '../../../../styles/fonts';
+
+.comment {
+    @apply bg-light w-full h-84 p-12 flex-shrink-0 select-none border border-solid border-orange-dark rounded-b-md transition-all opacity-25 duration-500;
+
+    .stars {
+        @apply flex gap-2;
+
+        .star {
+            @apply w-6 h-6;
+        }
+    }
+
+    .comment-text {
+        @apply text-dark-gray mt-9 h-17 text-ellipsis line-clamp-2;
+        @include text;
+        animation: comment-close-animation 350ms linear;
+        @media (max-width: 767px) {
+            animation-name: mobile-comment-close-animation;
+        }
+    }
+
+    .user {
+        @apply mt-9 flex gap-6;
+
+        .avatar {
+            @apply w-20 h-20;
+        }
+
+        .user-details {
+            @apply flex flex-col gap-1;
+
+            .name {
+                @apply text-dark mt-2;
+                @include h4;
+            }
+
+            .company {
+                @apply text-dark;
+                @include text;
+            }
+        }
+    }
+}
+
+.active {
+    @apply opacity-100 md:h-100 h-156;
+
+    .comment-text {
+        @apply md:h-32 h-88.5 whitespace-normal line-clamp-none overflow-hidden;
+        @media (min-width: 768px) {
+            animation-name: comment-open-animation;
+        }
+        animation-name: mobile-comment-open-animation;
+    }
+}
+
+@keyframes comment-open-animation {
+    from {
+        height: 4.25rem;
+    }
+    to {
+        height: 8rem;
+    }
+}
+
+@keyframes comment-close-animation {
+    from {
+        height: 8rem;
+    }
+    to {
+        height: 4.25rem;
+    }
+}
+
+@keyframes mobile-comment-open-animation {
+    from {
+        height: 4.25rem;
+    }
+    to {
+        height: 22.125rem;
+    }
+}
+
+@keyframes mobile-comment-close-animation {
+    from {
+        height: 22.125rem;
+    }
+    to {
+        height: 4.25rem;
+    }
+}

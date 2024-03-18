@@ -1,4 +1,5 @@
 import AboutGallery from '../components/AboutUs/AboutGallery/AboutGallery';
+import CommentsCarousel from '../components/AboutUs/CommentsCarousel/CommentsCarousel';
 import DescriptionSection from '../components/AboutUs/DescriptionSection/DescriptionSection';
 import FeaturesSection from '../components/AboutUs/FeaturesSection/FeaturesSection';
 import TeamCarousel from '../components/AboutUs/TeamCarousel/TeamCarousel';
@@ -14,6 +15,7 @@ function About() {
             <FeaturesSection />
             <BackgroundDark>
                 <TeamCarousel />
+                <CommentsCarousel />
             </BackgroundDark>
         </main>
     );
