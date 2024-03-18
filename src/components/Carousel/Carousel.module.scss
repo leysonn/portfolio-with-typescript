@@ -1,0 +1,60 @@
+@import '../../styles/widths';
+@import '../../styles/fonts';
+
+.teamCarousel {
+    @include width-1170;
+
+    .container {
+        @apply flex justify-between;
+
+        .title-container {
+            @apply sm:mt-23 mt-27;
+
+            .name {
+                @apply text-light-accent;
+                @include h5;
+            }
+
+            .title {
+                @apply text-light sm:mt-5 mt-4;
+                @media (min-width: 1024px) {
+                    @include h2;
+                }
+                @include h3;
+            }
+        }
+
+        .buttons-container {
+            @apply sm:flex hidden gap-4 self-end;
+
+            .button {
+                @apply w-12 h-12 rounded-full border border-solid border-gray;
+
+                .icon {
+                    @apply w-full h-full p-4;
+                }
+            }
+        }
+    }
+
+    .carousel {
+        @apply mt-16;
+
+        .carousel-container {
+            @apply flex transition-transform;
+        }
+    }
+
+    .dots-container {
+        @apply flex justify-center gap-5 my-13;
+
+        .dot {
+            @apply w-3 h-3 border border-solid border-primary-light rounded-full cursor-pointer transition-colors;
+
+            &-active {
+                @extend .dot;
+                @apply bg-light-accent border-none;
+            }
+        }
+    }
+}
