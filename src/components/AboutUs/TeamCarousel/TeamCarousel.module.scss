@@ -9,6 +9,6 @@
     @apply h-91 overflow-hidden;
 
     .carousel-container {
-        @apply gap-7.5 duration-200;
+        @apply gap-7.5 transition-transform duration-200;
     }
 }
