@@ -1,0 +1,50 @@
+@import '../../../styles/fonts';
+@import '../../../styles/widths';
+
+.faq-item {
+    @apply transition-colors delay-75 duration-300 border-b border-solid border-primary-gray;
+
+    .faq-item-content {
+        @apply flex items-center justify-between h-28 cursor-pointer sm:px-10 py-10 px-7 select-none;
+
+        .icon-container {
+            @apply bg-light-accent w-8 h-8 rounded-full transition-transform duration-200 shrink-0;
+
+            .icon {
+                @apply w-full h-full p-2.5;
+            }
+        }
+
+        .title {
+            @apply text-light sm:w-auto w-56.5 transition-colors delay-75 duration-300 sm:ml-2;
+            @include h4;
+        }
+    }
+
+    .faq-item-expanded {
+        @apply h-0 overflow-hidden transition-all duration-500;
+
+        .description {
+            @apply text-dark-gray sm:mx-12 mx-7;
+            @include text;
+        }
+    }
+}
+
+.expanded {
+    @apply bg-light border-none;
+
+    .faq-item-content {
+        .icon-container {
+            @apply rotate-180;
+        }
+
+        .title {
+            @apply text-dark;
+        }
+    }
+
+    .faq-item-expanded {
+        @apply md:h-40 sm:h-60 h-74;
+    }
+}

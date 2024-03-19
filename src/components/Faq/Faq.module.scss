@@ -1,0 +1,7 @@
+.faq {
+    @apply border border-solid border-primary-gray rounded-md overflow-hidden;
+
+    & > :last-child {
+        @apply border-none;
+    }
+}
