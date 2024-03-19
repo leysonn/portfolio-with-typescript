@@ -1,0 +1,24 @@
+@import '../../../styles/fonts';
+
+.faq-section {
+    @apply lg:w-192.5 md:w-180 sm:w-120 w-mobile mx-auto mt-20;
+
+    .title-container {
+        @apply w-full mb-16.5;
+
+        .name {
+            @apply text-light-accent;
+            @include h5;
+        }
+
+        .title {
+            @apply mt-4.5 mb-7.5 text-light;
+            @include h3;
+        }
+
+        .description {
+            @apply text-light-gray;
+            @include text;
+        }
+    }
+}
