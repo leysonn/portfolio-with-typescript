@@ -14,7 +14,7 @@ import project5_image from '../assets/images/projects/1/project5.png';
 import project_preview from '../assets/images/projects/1/preview.png';
 import project_video_mp4 from '../assets/videos/test-video.mp4';
 import project_video_webm from '../assets/videos/test-video.webm';
-import client_logo1 from '../assets/images/partners/logo2.png';
+import client_logo1 from '../assets/images/partners/light/logo2.png';
 
 export type ProjectsList = {
     types: string[];
