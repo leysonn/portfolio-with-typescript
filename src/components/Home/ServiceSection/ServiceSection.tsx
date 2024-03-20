@@ -23,7 +23,7 @@ function ServiceSection() {
             >
                 <div className={styles.quoteContainer}>
                     <img src={avatar} alt="Avatar" />
-                    <article>
+                    <article className={styles.quote}>
                         <p>"Understanding, ability to put themselves in the merchant's shoes. It is meant to partner."</p>
                         <span>Jenny Murtaugh</span>
                     </article>
