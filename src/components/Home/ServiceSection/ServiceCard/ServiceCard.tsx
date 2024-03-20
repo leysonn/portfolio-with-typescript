@@ -5,7 +5,7 @@ import { Link } from '@tanstack/react-router';
 
 function ServiceCard({ icon, title, description, button, url }: ServicesListItem) {
     return (
-        <div className={styles.serviceCard}>
+        <article className={styles.serviceCard}>
             <div className={styles.iconContainer}>
                 <img className={styles.icon} src={icon} alt="Service icon" draggable={false} />
             </div>
@@ -16,7 +16,7 @@ function ServiceCard({ icon, title, description, button, url }: ServicesListItem
                     {button.content}
                 </Button>
             </Link>
-        </div>
+        </article>
     );
 }
 

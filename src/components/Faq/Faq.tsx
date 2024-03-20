@@ -9,7 +9,7 @@ function Faq() {
     const toggleIsExpanded = useCallback((index: number) => setCurrentQuestion(currentQuestion => (currentQuestion === index ? NaN : index)), []);
 
     return (
-        <div className={styles.faq}>
+        <article className={styles.faq}>
             {faqList.map((question, index) => (
                 <FaqItem
                     key={index}
@@ -19,7 +19,7 @@ function Faq() {
                     toggleIsExpanded={() => toggleIsExpanded(index)}
                 />
             ))}
-        </div>
+        </article>
     );
 }
 

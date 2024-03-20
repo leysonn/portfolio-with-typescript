@@ -18,7 +18,7 @@ function Comment({ comment, user, active }: CommentProps) {
     }
 
     return (
-        <div className={styles.comment + (active ? ' ' + styles.active : '')}>
+        <article className={styles.comment + (active ? ' ' + styles.active : '')}>
             <div className={styles.stars}>{stars}</div>
             <p className={styles.commentText}>{comment}</p>
             <div className={styles.user}>
@@ -28,7 +28,7 @@ function Comment({ comment, user, active }: CommentProps) {
                     <span className={styles.company}>{user.company}</span>
                 </div>
             </div>
-        </div>
+        </article>
     );
 }
 

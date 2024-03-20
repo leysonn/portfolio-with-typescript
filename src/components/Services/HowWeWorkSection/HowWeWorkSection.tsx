@@ -18,11 +18,11 @@ function HowWeWorkSection() {
                 }}
                 aside={{
                     element: (
-                        <div className={styles.reasonsContainer}>
+                        <ul className={styles.reasonsContainer}>
                             {reasonsList.map((item, index) => (
                                 <ReasonItem key={index} number={item.number} title={item.title} />
                             ))}
-                        </div>
+                        </ul>
                     ),
                     position: 'after',
                 }}

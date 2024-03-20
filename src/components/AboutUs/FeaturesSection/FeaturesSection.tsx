@@ -19,15 +19,15 @@ function FeaturesSection() {
                 aside={{
                     element: (
                         <div className={styles.cardContainer}>
-                            <div className={styles.cardWhite}>
+                            <article className={styles.cardWhite}>
                                 <img src={card_icon} alt="Card icon" />
                                 <h3 className={styles.cardTitle}>Professional</h3>
                                 <p className={styles.cardDescription}>Full service range including technical skills, design.</p>
-                            </div>
-                            <div className={styles.card}>
+                            </article>
+                            <article className={styles.card}>
                                 <h3 className={styles.cardTitle}>Accessibility</h3>
                                 <p className={styles.cardDescription}>Business understanding, ability to put themselves.</p>
-                            </div>
+                            </article>
                         </div>
                     ),
                     position: 'after',

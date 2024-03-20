@@ -35,10 +35,10 @@ function HeroSection() {
                     </div>
                     <div className={styles.quoteContainer}>
                         <img src={avatar} alt="Avatar" />
-                        <div>
+                        <article>
                             <p>"Put themselves in the merchant's shoes"</p>
                             <span>Meta Inc.</span>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>

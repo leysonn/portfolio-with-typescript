@@ -23,10 +23,10 @@ function ServiceSection() {
             >
                 <div className={styles.quoteContainer}>
                     <img src={avatar} alt="Avatar" />
-                    <div>
+                    <article>
                         <p>"Understanding, ability to put themselves in the merchant's shoes. It is meant to partner."</p>
                         <span>Jenny Murtaugh</span>
-                    </div>
+                    </article>
                 </div>
                 <Link to="/services">
                     <Button width={9.62} color="light" className={styles.button}>
