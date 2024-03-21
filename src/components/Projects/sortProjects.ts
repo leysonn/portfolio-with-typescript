@@ -1,10 +1,10 @@
-import { projectsList, ProjectItem } from '../../constants/projectsList';
+import { projectsList as defaultProjectsList, ProjectItem, ProjectsList } from '../../constants/projectsList';
 
 type SortedProjects = {
     [key: string]: ProjectItem[];
 };
 
-export function sortProjects(allProjects: string): SortedProjects {
+export function sortProjects(allProjects: string, projectsList: ProjectsList = defaultProjectsList): SortedProjects {
     const sortedProjects: SortedProjects = {};
     sortedProjects[allProjects] = projectsList.projects;
 
