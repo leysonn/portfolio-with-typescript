@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { SyntheticEvent, useCallback, useState } from 'react';
 import { useVideoDuration } from '../../hooks/useVideoDuration';
 import styles from './Video.module.scss';
 import play_icon from '../../assets/icons/play_icon.svg';
@@ -19,9 +19,16 @@ function Video({ preview, video_mp4, webm = false, video_webm, className }: Vide
         setIsPlaying(isPlaying => !isPlaying);
     }, []);
 
+    const handleMetadata = useCallback(
+        (event: SyntheticEvent<HTMLVideoElement>): void => {
+            setMetadata(event.currentTarget.duration);
+        },
+        [setMetadata],
+    );
+
     return (
         <div className={styles.videoWrapper + ' ' + className}>
-            <video className={styles.video} onLoadedMetadata={setMetadata} hidden={!isPlaying} controls muted autoPlay>
+            <video className={styles.video} onLoadedMetadata={handleMetadata} hidden={!isPlaying} controls muted autoPlay>
                 <source src={video_mp4} type="video/mp4" />
                 {webm ? <source src={video_webm} type="video/webm" /> : null}
                 Your browser does not support the video tag.
