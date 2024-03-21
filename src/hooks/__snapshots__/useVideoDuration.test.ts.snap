@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`useVideoDuration > call with boundary duration 1`] = `"0:01"`;
+
+exports[`useVideoDuration > call with boundary duration 2`] = `"1666:40"`;
+
+exports[`useVideoDuration > call with correct duration 1`] = `"1:40"`;
