@@ -71,10 +71,11 @@ function Carousel({ list, buttons = false, width = 'default', titleContainer, ca
                 )}
             </div>
             <div className={carousel.wrapperClassName ? carousel.wrapperClassName : undefined}>
-                <div className={`${styles.carousel} ${carousel.className}`} {...swipeHandlers}>
+                <div className={`${styles.carousel} ${carousel.className}`} {...swipeHandlers} data-testid="carousel">
                     <div
                         className={`${styles.carouselContainer} ${carousel.containerClassName}`}
                         style={{ transform: `translateX(calc(-${activeIndex} * ${carousel.itemWidth}))` }}
+                        data-testid="carousel-container"
                     >
                         {list.map(carousel.content)}
                     </div>

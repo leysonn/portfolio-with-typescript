@@ -24,11 +24,11 @@ function createTestRouter(component: () => React.ReactElement) {
     return router;
 }
 
-function customRender(ui: () => React.ReactElement, options = {}) {
+function renderWithRouter(ui: () => React.ReactElement, options = {}) {
     const router = createTestRouter(ui);
     return render(<RouterProvider router={router} />, options);
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
 export * from '@testing-library/react';
-export { customRender as render };
+export { renderWithRouter };

@@ -14,11 +14,11 @@ type CommentProps = {
 function Comment({ comment, user, active }: CommentProps) {
     const stars: JSX.Element[] | null = [];
     for (let i = 0; i < 5; i++) {
-        stars.push(<img className={styles.star} src={star} alt="Star" />);
+        stars.push(<img key={i} className={styles.star} src={star} alt="Star" />);
     }
 
     return (
-        <article className={styles.comment + (active ? ' ' + styles.active : '')}>
+        <article className={styles.comment + (active ? ' ' + styles.active : '')} data-testid="comment">
             <div className={styles.stars}>{stars}</div>
             <p className={styles.commentText}>{comment}</p>
             <div className={styles.user}>

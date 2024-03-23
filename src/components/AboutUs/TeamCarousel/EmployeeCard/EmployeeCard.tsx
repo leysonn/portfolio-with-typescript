@@ -3,7 +3,7 @@ import styles from './EmployeeCard.module.scss';
 
 function EmployeeCard({ name, role, image }: TeamListItem) {
     return (
-        <div className={styles.employeeCard}>
+        <div className={styles.employeeCard} data-testid="employee-card">
             <div className={styles.imageContainer}>
                 <img className={styles.image} src={image} alt={name} draggable={false} />
             </div>
