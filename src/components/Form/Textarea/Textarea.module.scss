@@ -1,0 +1,14 @@
+@import '../../../styles/fonts';
+
+.textarea {
+    @apply w-full h-24 px-4 py-2.5 rounded-md border border-solid border-orange-dark text-dark bg-light resize-none;
+    @include text;
+
+    &:focus {
+        @apply border-light-accent outline-none;
+    }
+
+    &::placeholder {
+        @apply text-dark-gray;
+    }
+}
