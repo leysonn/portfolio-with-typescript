@@ -6,6 +6,11 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 import Dropdown from '../Form/Dropdown/Dropdown';
 import styles from './Projects.module.scss';
 import Button from '../Button/Button';
+import { useForm } from 'react-hook-form';
+
+type DropdownT = {
+    type: string;
+};
 
 function Projects() {
     const allTypes: string = 'Show All';
@@ -13,6 +18,7 @@ function Projects() {
 
     const [selectedType, setSelectedType] = useState(allTypes);
     const [projectsCount, setProjectsCount] = useState(9);
+    const { register } = useForm<DropdownT>();
 
     const handleSelectorClick = useCallback((event: React.MouseEvent<HTMLButtonElement>): void => {
         setSelectedType(event.currentTarget.innerText);
@@ -47,13 +53,14 @@ function Projects() {
                     />
                 ))}
             </div>
-            <Dropdown
-                className={styles.projectsDropdown}
-                label={{ text: '', for: 'projects' }}
-                options={[allTypes].concat(projectsList.types)}
-                value={selectedType}
-                onChange={handleDropdownChange}
-            />
+
+            <form className={styles.projectsDropdown}>
+                <Dropdown
+                    options={[allTypes].concat(projectsList.types)}
+                    value={selectedType}
+                    register={register('type', { onChange: handleDropdownChange })}
+                />
+            </form>
 
             <div className={styles.projectsContent}>
                 <div className={styles.projectsContainer}>
