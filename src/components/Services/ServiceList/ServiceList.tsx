@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
-import { useRouter } from '@tanstack/react-router';
+import { useRouterState } from '@tanstack/react-router';
 import { servicesList } from './servicesList';
 import Service from '../Service/Service';
 
 function ServiceList() {
-    const { state } = useRouter();
-    const hash = state.location.hash;
+    const routerState = useRouterState();
+    const hash = routerState.location.hash;
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
