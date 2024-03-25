@@ -1,0 +1,14 @@
+@import '../../../styles/fonts';
+
+.input {
+    @apply w-full h-12 px-4 rounded-md border border-solid border-orange-dark text-dark bg-light;
+    @include text;
+
+    &:focus {
+        @apply border-light-accent outline-none;
+    }
+
+    &::placeholder {
+        @apply text-dark-gray;
+    }
+}
