@@ -1,14 +1,17 @@
+import { Link, useRouterState } from '@tanstack/react-router';
 import FooterContact from './FooterContact/FooterContact';
 import styles from './Footer.module.scss';
 import Hr from '../Hr/Hr';
 import SocialLink from '../SocialLink/SocialLink';
-import { Link } from '@tanstack/react-router';
 import { footerLinks } from './footerLinks';
 
 function Footer() {
+    const routerState = useRouterState();
+
     return (
         <footer className={styles.footer}>
-            <FooterContact />
+            {!routerState.location.pathname.match(/\/contact$/) && <FooterContact />}
+
             <div className={styles.footerContent}>
                 <div className={styles.footerContainer}>
                     <h2 className={styles.footerTitle}>Agency</h2>
