@@ -11,6 +11,8 @@
 - [Sass](https://sass-lang.com)
 - [Tailwind CSS](https://tailwindcss.com)
 - [CSS Modules](https://github.com/css-modules/css-modules)
+- [Vitest](https://vitest.dev)
+- [React Hook Form](https://react-hook-form.com)
 
 # Запуск проекта:
 **Проект загружен на [Github Pages](https://leysonn.github.io/portfolio-with-typescript), но вы так же можете запустить его самостоятельно.**
