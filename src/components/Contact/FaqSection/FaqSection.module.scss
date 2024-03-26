@@ -1,0 +1,22 @@
+@import '../../../styles/fonts';
+
+.faq-section {
+    @apply xl:justify-end justify-center sm:gap-3 lg:gap-32.5 md:mt-36 mt-32 md:mb-32 mb-28;
+
+    .title-container {
+        @apply -mt-5 flex-shrink-0 md:mb-0 mb-9;
+
+        .title {
+            @apply mt-4;
+            @include h3;
+        }
+
+        .description {
+            @apply md:mt-8 mt-4;
+        }
+
+        .button {
+            @apply md:mt-7 mt-8;
+        }
+    }
+}

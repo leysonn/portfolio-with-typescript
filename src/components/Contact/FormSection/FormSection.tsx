@@ -35,7 +35,7 @@ function FormSection() {
     }, []);
 
     return (
-        <section className={styles.formSection}>
+        <section className={styles.formSection} id='contact'>
             <div className={styles.wrapper}>
                 <div className={styles.formContent}>
                     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
