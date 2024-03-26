@@ -11,4 +11,17 @@
     &::placeholder {
         @apply text-dark-gray;
     }
+
+    &:disabled {
+        @apply cursor-not-allowed bg-orange-light text-dark-gray;
+    }
+
+    &-error {
+        @extend .input;
+        @apply border-error;
+
+        &:focus {
+            @apply border-error;
+        }
+    }
 }

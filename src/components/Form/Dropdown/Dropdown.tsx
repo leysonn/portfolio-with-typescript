@@ -1,18 +1,24 @@
 import { UseFormRegisterReturn } from 'react-hook-form';
+import { SelectHTMLAttributes } from 'react';
 import styles from './Dropdown.module.scss';
 import dropdown_icon from '../../../assets/icons/dropdown_icon.svg';
 
-type DropdownProps = {
+interface DropdownProps extends SelectHTMLAttributes<HTMLSelectElement> {
     register: UseFormRegisterReturn<string>;
     options: string[];
-    value: string;
     defaultValue?: string;
-};
+    error?: boolean;
+}
 
-function Dropdown({ options, value, defaultValue, register }: DropdownProps) {
+function Dropdown({ options, defaultValue, register, error, value, ...props }: DropdownProps) {
     return (
         <div className={styles.dropdownContainer}>
-            <select className={styles.dropdown + (value === '' ? ' ' + styles.defaultValue : '')} value={value} {...register}>
+            <select
+                className={(error ? styles.dropdownError : styles.dropdown) + (value === '' ? ' ' + styles.defaultValue : '')}
+                value={value}
+                {...register}
+                {...props}
+            >
                 {defaultValue && (
                     <option value="" disabled hidden>
                         {defaultValue}

@@ -1,13 +1,14 @@
 import { UseFormRegisterReturn } from 'react-hook-form';
+import { InputHTMLAttributes } from 'react';
 import styles from './Textarea.module.scss';
 
-type TextareaProps = {
+interface TextareaProps extends InputHTMLAttributes<HTMLTextAreaElement> {
     register: UseFormRegisterReturn<string>;
-    placeholder: string;
-};
+    error?: boolean;
+}
 
-function Textarea({ register, placeholder }: TextareaProps) {
-    return <textarea className={styles.textarea} placeholder={placeholder} {...register} />;
+function Textarea({ register, error, ...props }: TextareaProps) {
+    return <textarea className={error ? styles.textareaError : styles.textarea} {...register} {...props} />;
 }
 
 export default Textarea;

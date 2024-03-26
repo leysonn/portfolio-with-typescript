@@ -1,13 +1,14 @@
 import { UseFormRegisterReturn } from 'react-hook-form';
+import { InputHTMLAttributes } from 'react';
 import styles from './Input.module.scss';
 
-type InputProps = {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     register: UseFormRegisterReturn<string>;
-    placeholder: string;
-};
+    error?: boolean;
+}
 
-function Input({ register, placeholder }: InputProps) {
-    return <input className={styles.input} placeholder={placeholder} {...register} />;
+function Input({ register, error, ...props }: InputProps) {
+    return <input className={error ? styles.inputError : styles.input} {...register} {...props} />;
 }
 
 export default Input;
