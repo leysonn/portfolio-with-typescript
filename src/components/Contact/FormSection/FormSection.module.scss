@@ -1,0 +1,43 @@
+@import '../../../styles/fonts';
+
+.form-section {
+    @apply relative w-screen;
+
+    .map {
+        @apply w-full h-180 object-cover object-center md:mt-0 -mt-115;
+    }
+
+    .wrapper {
+        @apply w-full md:absolute top-0 left-0;
+    }
+
+    .form-content {
+        @apply lg:w-218 md:w-156 sm:w-120 w-mobile flex md:flex-row flex-col justify-between md:items-start items-center md:py-32 py-16 mx-auto relative xl:-left-37 md:-left-10;
+
+        .poi-container {
+            @apply bg-light-accent w-18 h-18 rounded-full md:my-49 md:mx-0 mt-97 mx-auto;
+
+            .poi {
+                @apply w-full h-full p-5;
+            }
+        }
+
+        .form {
+            @apply sm:w-117.5 w-mobile h-116 bg-light rounded-md flex flex-col gap-4 py-12 sm:px-12 px-7;
+
+            .title {
+                @apply mt-2.5 text-dark;
+                @include h4;
+            }
+
+            .button {
+                @apply mt-4 self-end;
+
+                &-submitted {
+                    @extend .button;
+                    @apply bg-success;
+                }
+            }
+        }
+    }
+}
