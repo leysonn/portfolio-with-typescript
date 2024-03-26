@@ -6,11 +6,12 @@ type FaqItemProps = {
     description: string;
     isExpanded: boolean;
     toggleIsExpanded: () => void;
+    theme: 'light' | 'dark';
 };
 
-function FaqItem({ title, description, isExpanded, toggleIsExpanded }: FaqItemProps) {
+function FaqItem({ title, description, isExpanded, toggleIsExpanded, theme }: FaqItemProps) {
     return (
-        <section className={styles.faqItem + (isExpanded ? ' ' + styles.expanded : '')}>
+        <section className={styles[theme] + ' ' + styles.faqItem + (isExpanded ? ' ' + styles.expanded : '')}>
             <div className={styles.faqItemContent} onClick={toggleIsExpanded}>
                 <h3 className={styles.title}>{title}</h3>
                 <div className={styles.iconContainer}>

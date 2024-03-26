@@ -2,7 +2,7 @@
 @import '../../../styles/widths';
 
 .faq-item {
-    @apply transition-colors delay-75 duration-300 border-b border-solid border-primary-gray;
+    @apply transition-colors delay-75 duration-300 border-b border-solid;
 
     .faq-item-content {
         @apply flex items-center justify-between h-28 cursor-pointer sm:px-10 py-10 px-7 select-none;
@@ -16,7 +16,7 @@
         }
 
         .title {
-            @apply text-light sm:w-auto w-56.5 transition-colors delay-75 duration-300 sm:ml-2;
+            @apply sm:w-auto w-56.5 transition-colors delay-75 duration-300 sm:ml-2;
             @include h4;
         }
     }
@@ -46,5 +46,21 @@
 
     .faq-item-expanded {
         @apply md:h-40 sm:h-60 h-74;
+    }
+}
+
+.light {
+    @apply border-orange-dark;
+
+    .title {
+        @apply text-dark;
+    }
+}
+
+.dark {
+    @apply border-primary-gray;
+
+    .title {
+        @apply text-light;
     }
 }
