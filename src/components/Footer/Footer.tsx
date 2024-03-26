@@ -10,7 +10,7 @@ function Footer() {
 
     return (
         <footer className={styles.footer}>
-            {!routerState.location.pathname.match(/\/contact$/) && <FooterContact />}
+            {!routerState.location.pathname.match(/\/contact/) && <FooterContact />}
 
             <div className={styles.footerContent}>
                 <div className={styles.footerContainer}>
