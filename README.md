@@ -1,4 +1,4 @@
-# Сайт-портфолио на React [WIP]
+# Сайт-портфолио на React
 
 **Проект сделан по [бесплатному макету](https://www.figma.com/community/file/1063415783897538948/portfolio-template) из Figma.**
 
