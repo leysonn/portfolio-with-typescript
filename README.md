@@ -12,6 +12,7 @@
 - [Tailwind CSS](https://tailwindcss.com)
 - [CSS Modules](https://github.com/css-modules/css-modules)
 - [Vitest](https://vitest.dev)
+- [React Testing Library](https://testing-library.com)
 - [React Hook Form](https://react-hook-form.com)
 
 # Запуск проекта:

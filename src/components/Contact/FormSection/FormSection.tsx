@@ -39,7 +39,7 @@ function FormSection() {
             <div className={styles.wrapper}>
                 <div className={styles.formContent}>
                     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-                        <h3 className={styles.title}>Get in touch</h3>
+                        <h2 className={styles.title}>Get in touch</h2>
                         <Input
                             placeholder="Your email"
                             register={register('email', {
