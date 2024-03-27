@@ -6,7 +6,6 @@ async function checkEmail(submitButton: HTMLButtonElement, emailInput: HTMLInput
     fireEvent.click(submitButton);
 
     await waitFor(() => expect(emailInput.value).toBe(email));
-    expect(emailInput).toHaveClass(/error/i);
 }
 
 beforeEach(() => {
@@ -70,26 +69,33 @@ describe('FormSection', () => {
 
     it('invalid email', async () => {
         const emailInput = screen.getByTestId<HTMLInputElement>('email-input');
-        const subjectSelect = screen.getByTestId<HTMLSelectElement>('subject-select');
-        const messageInput = screen.getByTestId<HTMLInputElement>('message-input');
         const submitButton = screen.getByTestId<HTMLButtonElement>('submit-button');
 
         fireEvent.change(emailInput, { target: { value: 'test@me' } });
-        fireEvent.change(subjectSelect, { target: { value: 'Design' } });
-        fireEvent.change(messageInput, { target: { value: 'test message' } });
-
         fireEvent.click(submitButton);
 
         await waitFor(() => expect(emailInput).toHaveClass(/error/i));
-        expect(subjectSelect).not.toHaveClass(/error/i);
-        expect(messageInput).not.toHaveClass(/error/i);
 
-        checkEmail(submitButton, emailInput, 'test@me');
-        checkEmail(submitButton, emailInput, 'test @me.com');
-        checkEmail(submitButton, emailInput, 'test@tes.t');
+        await checkEmail(submitButton, emailInput, 'test@me');
+        expect(emailInput).toHaveClass(/error/i);
+        await checkEmail(submitButton, emailInput, 'test @me.com');
+        expect(emailInput).toHaveClass(/error/i);
+        await checkEmail(submitButton, emailInput, 'test@tes.t');
+        expect(emailInput).toHaveClass(/error/i);
 
         fireEvent.change(emailInput, { target: { value: 'test@me.com' } });
+        await waitFor(() => expect(emailInput.value).toBe('test@me.com'));
+        expect(emailInput).not.toHaveClass(/error/i);
+    });
 
+    it('too long email', async () => {
+        const emailInput = screen.getByTestId<HTMLInputElement>('email-input');
+        const submitButton = screen.getByTestId<HTMLButtonElement>('submit-button');
+
+        await checkEmail(submitButton, emailInput, 't'.repeat(74) + '@me.com');
+        expect(emailInput).toHaveClass(/error/i);
+
+        fireEvent.change(emailInput, { target: { value: 'test@me.com' } });
         await waitFor(() => expect(emailInput.value).toBe('test@me.com'));
         expect(emailInput).not.toHaveClass(/error/i);
     });
