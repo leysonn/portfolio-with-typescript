@@ -35,7 +35,7 @@ function FormSection() {
     }, []);
 
     return (
-        <section className={styles.formSection} id='contact'>
+        <section className={styles.formSection} id="contact" data-testid="form-section">
             <div className={styles.wrapper}>
                 <div className={styles.formContent}>
                     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
@@ -43,27 +43,39 @@ function FormSection() {
                         <Input
                             placeholder="Your email"
                             register={register('email', {
-                                required: true,
-                                pattern: /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/,
+                                required: 'Email is required',
+                                pattern: { value: /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}\W*?$/, message: 'Email is invalid' },
+                                disabled: submitted,
+                                maxLength: { value: 80, message: 'Email is too long' },
                             })}
                             error={!!errors.email}
-                            disabled={submitted}
+                            title={errors.email ? errors.email.message : undefined}
+                            data-testid="email-input"
                         />
                         <Dropdown
-                            register={register('subject', { required: true, onChange: handleDropdownChange })}
+                            register={register('subject', { required: 'Subject is required', onChange: handleDropdownChange, disabled: submitted })}
                             options={projectsList.types}
                             defaultValue="Subject"
                             value={dropdownValue}
                             error={!!errors.subject}
-                            disabled={submitted}
+                            title={errors.subject ? errors.subject.message : undefined}
+                            data-testid="subject-select"
                         />
                         <Textarea
                             placeholder="Message"
-                            register={register('message', { required: true })}
+                            register={register('message', { required: 'Message is required', disabled: submitted })}
                             error={!!errors.message}
-                            disabled={submitted}
+                            title={errors.message ? errors.message.message : undefined}
+                            data-testid="message-input"
                         />
-                        <Button className={submitted ? styles.buttonSubmitted : styles.button} color="light_accent" width={9.62} disabled={submitted}>
+
+                        <Button
+                            className={submitted ? styles.buttonSubmitted : styles.button}
+                            color="light_accent"
+                            width={9.62}
+                            disabled={submitted}
+                            data-testid="submit-button"
+                        >
                             {submitted ? `Submitted ✔` : 'Submit Now'}
                         </Button>
                     </form>
