@@ -42,7 +42,6 @@ function Service({ service, positionRight, forwardRef, open }: ServiceProps) {
                     </div>
                 </div>
             </div>
-            <Hr />
         </section>
     );
 }
