@@ -1,4 +1,5 @@
 import { MouseEvent } from 'react';
+import clsx from 'clsx';
 import styles from './TypeSelector.module.scss';
 
 type TypeSelectorProps = {
@@ -11,7 +12,7 @@ type TypeSelectorProps = {
 function TypeSelector({ type, onClick, count, active }: TypeSelectorProps) {
     return (
         <div className={styles.typeSelector}>
-            <button className={active ? styles.active : ''} onClick={onClick}>
+            <button className={clsx(active && styles.active)} onClick={onClick}>
                 {type}
             </button>
             <span className={styles.count}>{count}</span>

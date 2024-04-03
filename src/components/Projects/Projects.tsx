@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react';
+import clsx from 'clsx';
 import { projectsList } from '../../constants/projectsList';
 import { sortProjects } from './sortProjects';
 import TypeSelector from './TypeSelector/TypeSelector';
@@ -69,7 +70,7 @@ function Projects() {
                     ))}
                 </div>
                 <Button
-                    className={styles.button + (projectsCount >= sortedProjects[selectedType].length ? ' ' + styles.hidden : '')}
+                    className={clsx(styles.button, projectsCount >= sortedProjects[selectedType].length && styles.hidden)}
                     width={10.62}
                     color="light"
                     onClick={handleLoadMoreClick}

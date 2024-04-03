@@ -49,7 +49,7 @@ function FormSection() {
                                 maxLength: { value: 80, message: 'Email is too long' },
                             })}
                             error={!!errors.email}
-                            title={errors.email ? errors.email.message : undefined}
+                            title={errors.email?.message}
                             data-testid="email-input"
                         />
                         <Dropdown
@@ -58,14 +58,14 @@ function FormSection() {
                             defaultValue="Subject"
                             value={dropdownValue}
                             error={!!errors.subject}
-                            title={errors.subject ? errors.subject.message : undefined}
+                            title={errors.subject?.message}
                             data-testid="subject-select"
                         />
                         <Textarea
                             placeholder="Message"
                             register={register('message', { required: 'Message is required', disabled: submitted })}
                             error={!!errors.message}
-                            title={errors.message ? errors.message.message : undefined}
+                            title={errors.message?.message}
                             data-testid="message-input"
                         />
 
