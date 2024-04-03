@@ -1,5 +1,6 @@
 import { useCallback } from 'react';
 import { useSwipeable } from 'react-swipeable';
+import clsx from 'clsx';
 import styles from './Carousel.module.scss';
 import left_arrow from '../../assets/icons/left_arrow_icon.svg';
 import right_arrow from '../../assets/icons/right_arrow_icon.svg';
@@ -53,9 +54,9 @@ function Carousel({ list, buttons = false, width = 'default', titleContainer, ca
     }, [setActiveIndex, list]);
 
     return (
-        <section className={styles.carouselSection + (width === 'screen' ? ' ' + styles.screen : '')}>
+        <section className={clsx(styles.carouselSection, width === 'screen' && styles.screen)}>
             <div className={styles.container}>
-                <div className={styles.titleContainer + (titleContainer.className ? ' ' + titleContainer.className : '')}>
+                <div className={clsx(styles.titleContainer, titleContainer.className)}>
                     <span className={styles.name}>{titleContainer.name}</span>
                     <h2 className={styles.title}>{titleContainer.title}</h2>
                 </div>
@@ -70,7 +71,7 @@ function Carousel({ list, buttons = false, width = 'default', titleContainer, ca
                     </div>
                 )}
             </div>
-            <div className={carousel.wrapperClassName ? carousel.wrapperClassName : undefined}>
+            <div className={carousel.wrapperClassName}>
                 <div className={`${styles.carousel} ${carousel.className}`} {...swipeHandlers} data-testid="carousel">
                     <div
                         className={`${styles.carouselContainer} ${carousel.containerClassName}`}

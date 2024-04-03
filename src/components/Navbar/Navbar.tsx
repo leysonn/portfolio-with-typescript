@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router';
 import { useCallback, useState } from 'react';
+import clsx from 'clsx';
 import styles from './Navbar.module.scss';
 import logo from '../../assets/images/logo.svg';
 import Button from '../Button/Button';
@@ -33,7 +34,7 @@ function Navbar() {
                 </Button>
             </section>
 
-            <div className={styles.mobileMenuWrapper + (mobileMenuVisible ? ' ' + styles.mobileMenuWrapperActive : '')}>
+            <div className={clsx(styles.mobileMenuWrapper, mobileMenuVisible && styles.mobileMenuWrapperActive)}>
                 <div className={styles.mobileMenuContent}>
                     <NavLinks onClick={toggleMobileMenu} />
                 </div>

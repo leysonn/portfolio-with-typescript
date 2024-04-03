@@ -5,7 +5,7 @@ import FaqItem from './FaqItem/FaqItem';
 
 type FaqProps = {
     theme?: 'light' | 'dark';
-}
+};
 
 function Faq({ theme = 'dark' }: FaqProps) {
     const [currentQuestion, setCurrentQuestion] = useState(0);

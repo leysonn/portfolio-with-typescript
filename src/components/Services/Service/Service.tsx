@@ -1,4 +1,5 @@
 import { LegacyRef, useCallback, useState } from 'react';
+import clsx from 'clsx';
 import { ServicesItem } from '../ServiceList/servicesList';
 import Features from '../../Features/Features';
 import Hr from '../../Hr/Hr';
@@ -28,13 +29,13 @@ function Service({ service, positionRight, forwardRef, open }: ServiceProps) {
                     </div>
                     <h2 className={styles.name}>{service.name}</h2>
                 </div>
-                <div className={styles.iconContainer + (isExpanded ? ' ' + styles.iconExpanded : '')}>
+                <div className={clsx(styles.iconContainer, isExpanded && styles.iconExpanded)}>
                     <img className={styles.icon} src={arrow_icon} alt="Expand icon" draggable={false} />
                 </div>
             </div>
-            <div className={styles.serviceExpanded + (!isExpanded ? ' ' + styles.collapsed : '')}>
+            <div className={clsx(styles.serviceExpanded, !isExpanded && styles.collapsed)}>
                 <Hr />
-                <div className={styles.serviceExpandedContainer + (positionRight ? ' ' + styles.positionRight : '')}>
+                <div className={clsx(styles.serviceExpandedContainer, positionRight && styles.positionRight)}>
                     <div className={styles.serviceExpandedContent}>
                         <h3 className={styles.title}>{service.title}</h3>
                         <p className={styles.description}>{service.description}</p>

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { ButtonHTMLAttributes } from 'react';
 import styles from './Button.module.scss';
 
@@ -9,7 +10,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 function Button({ children, className, width, color, ...props }: ButtonProps) {
     return (
-        <button style={{ width: width + 'rem' }} className={styles[color] + (className ? ' ' + className : '')} {...props}>
+        <button style={{ width: width + 'rem' }} className={clsx(styles[color], className)} {...props}>
             {children}
         </button>
     );

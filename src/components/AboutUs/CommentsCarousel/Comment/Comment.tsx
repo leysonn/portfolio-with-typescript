@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import styles from './Comment.module.scss';
 import star from '../../../../assets/icons/star.svg';
 
@@ -18,7 +19,7 @@ function Comment({ comment, user, active }: CommentProps) {
     }
 
     return (
-        <article className={styles.comment + (active ? ' ' + styles.active : '')} data-testid="comment">
+        <article className={clsx(styles.comment, active && styles.active)} data-testid="comment">
             <div className={styles.stars}>{stars}</div>
             <p className={styles.commentText}>{comment}</p>
             <div className={styles.user}>
